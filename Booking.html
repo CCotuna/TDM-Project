@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,379 +9,463 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
 </head>
+
 <body>
-       <!-- Navbar -->
-       <nav class="bg-white border-gray-200">
+    <!-- Navbar -->
+    <nav class="bg-white border-gray-200">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
-              <span class="self-center text-2xl font-semibold whitespace-nowrap text-red-800">SWEET LIKE HONEY</span>
-          </a>
-          <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
-              <!-- <span class="sr-only">Open main menu</span> -->
-              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-              </svg>
-          </button>
-          <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
-            <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
-              <li>
-                <a href="index.html" class="block py-2 px-3 text-white bg-red-800 rounded md:bg-transparent md:text-red-800 md:p-0 md:dark:text-red-800  dark:bg-red-800 md:dark:bg-transparent" aria-current="page">HOME</a>
-              </li>
-              <li>
-                <a href="About.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-800  md:p-0  md:dark:hover:text-red-800   md:dark:hover:bg-transparent" aria-current="page">ABOUT</a>
-              </li>
-              <li>
-                <a href="Portfolio.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-text-red-800 md:p-0  md:dark:hover:text-red-800  md:dark:hover:bg-transparent" aria-current="page">PORTFOLIO</a>
-              </li>
-              <li>
-                <a href="Services.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-800  md:p-0  md:dark:hover:text-red-800  md:dark:hover:bg-transparent" aria-current="page">SERVICES</a>
-              </li>
-              <li>
-                  <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 md:dark:hover:text-red-800 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-text-red-800  md:p-0 md:w-auto">COMMUNITY<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-        </svg></button>
-                  <!-- Dropdown menu -->
-                  <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-red-800 dark:divide-red-800">
-                      <ul class="py-2 text-sm text-white dark:text-white" aria-labelledby="dropdownLargeButton">
-                        <li>
-                          <a href="CommunityAndEvents.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-white md:dark:hover:text-red-800">COMMUNITY AND EVENTS</a>
-                        </li>
-                        <li>
-                          <a href="BlogNews.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-white md:dark:hover:text-red-800">BLOG / NEWS</a>
-                        </li>
-                        <li>
-                          <a href="Testimonials.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-white md:dark:hover:text-red-800">TESTIMONIALS</a>
-                        </li>
-                      </ul>
-                  </div>
-              </li>
-              <li>
-                <a href="Sitemap.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-800  md:p-0  md:dark:hover:text-red-800  md:dark:hover:bg-transparent">SITEMAP</a>
-              </li>
-              <li>
-                <a href="Contact.html" class="rounded-md bg-red-800 px-3.5 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-white hover:text-red-800 hover:border focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-800">CONTACT</a>
-            </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-           <!-- component -->
-<div class="flex justify-center items-center w-screen h-screen bg-white">
-	<!-- COMPONENT CODE -->
-	<div class="container mx-auto my-4 px-4 lg:px-20">
-
-		<div class="w-full p-8 my-4 md:px-12 lg:w-9/12 lg:pl-20 lg:pr-40 mr-auto rounded-2xl shadow-2xl">
-			<div class="flex">
-				<h1 class="font-bold uppercase text-5xl">BOOK A DATE</h1>
-			</div>
-			<div class="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5">
-				<input class="w-full bg-gray-100 text-red-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-            type="text" placeholder="First Name*" />
-            <input class="w-full bg-gray-100 text-red-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-            type="text" placeholder="Last Name*" />
-            <input class="w-full bg-gray-100 text-red-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-            type="text" placeholder="Type of shooting*" />
-				<input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-            type="text" placeholder="Subject*" />
-				<input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-            type="email" placeholder="Email*" />
-				<input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-            type="number" placeholder="Phone*" />
-        </div>
-				<div class="my-4">
-					<textarea placeholder="Message*" class="w-full h-32 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
-				</div>
-				<div class="my-2 w-1/2 lg:w-1/4">
-					<button class="uppercase text-sm font-bold tracking-wide bg-red-900 text-gray-100 p-3 rounded-lg w-full 
-                      focus:outline-none focus:shadow-outline">
-            Send Message
-          </button>
-				</div>
-			</div>
-
-			<div
-				class="w-full lg:-mt-96 lg:w-2/6 px-8 py-12 ml-auto bg-red-900 rounded-2xl shadow-2xl">
-				
-        <!-- Calendar -->
- <div class="flex items-center justify-center py-8 px-4 shadow-custom">
-  <div class="max-w-sm w-full shadow-lg">
-      <div class="md:p-8 p-5 dark:bg-red-950 bg-white rounded-t">
-          <div class="px-4 flex items-center justify-between">
-              <span tabindex="0" class="focus:outline-none text-base font-bold dark:text-gray-100 text-gray-800">October 2020</span>
-              <div class="flex items-center">
-                  <button aria-label="calendar backward" class="focus:text-gray-400 hover:text-gray-400 text-gray-800 dark:text-gray-100">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                          <polyline points="15 6 9 12 15 18" />
-                      </svg>
-                  </button>
-                  <button aria-label="calendar forward" class="focus:text-gray-400 hover:text-gray-400 ml-3 text-gray-800 dark:text-gray-100"> 
-                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                          <polyline points="9 6 15 12 9 18" />
-                      </svg>
-                  </button>
-              </div>
-          </div>
-          <div class="flex items-center justify-between pt-12 overflow-x-auto">
-              <table class="w-full">
-                  <thead>
-                      <tr>
-                        <th>
-                          <div class="w-full flex justify-center">
-                              <p class="text-base font-medium text-center text-gray-800 dark:text-gray-100">Mo</p>
-                          </div>
-                      </th>
-                      <th>
-                          <div class="w-full flex justify-center">
-                              <p class="text-base font-medium text-center text-gray-800 dark:text-gray-100">Tu</p>
-                          </div>
-                      </th>
-                      <th>
-                          <div class="w-full flex justify-center">
-                              <p class="text-base font-medium text-center text-gray-800 dark:text-gray-100">We</p>
-                          </div>
-                      </th>
-                      <th>
-                          <div class="w-full flex justify-center">
-                              <p class="text-base font-medium text-center text-gray-800 dark:text-gray-100">Th</p>
-                          </div>
-                      </th>
-                      <th>
-                          <div class="w-full flex justify-center">
-                              <p class="text-base font-medium text-center text-gray-800 dark:text-gray-100">Fr</p>
-                          </div>
-                      </th>
-                      <th>
-                          <div class="w-full flex justify-center">
-                              <p class="text-base font-medium text-center text-gray-800 dark:text-gray-100">Sa</p>
-                          </div>
-                      </th>
-                      <th>
-                          <div class="w-full flex justify-center">
-                              <p class="text-base font-medium text-center text-gray-800 dark:text-gray-100">Su</p>
-                          </div>
-                      </th>
-                  </tr>
-                      </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="pt-6">
-                          <div class="px-2 py-2 cursor-pointer flex w-full justify-center"></div>
-                      </td>
-                      <td class="pt-6">
-                          <div class="px-2 py-2 cursor-pointer flex w-full justify-center"></div>
-                      </td>
-                      <td>
-                          <div class="px-2 py-2 cursor-pointer flex w-full justify-center"></div>
-                      </td>
-                      <td class="pt-6">
-                          <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
-                              <p class="text-base text-gray-500 dark:text-gray-100 font-medium">1</p>
-                          </div>
-                      </td>
-                      <td class="pt-6">
-                          <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
-                              <p class="text-base text-gray-500 dark:text-gray-100 font-medium">2</p>
-                          </div>
-                      </td>
-                      <td class="pt-6">
-                          <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
-                              <p class="text-base text-gray-500 dark:text-gray-100">3</p>
-                          </div>
-                      </td>
-                      <td class="pt-6">
-                          <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
-                              <p class="text-base text-gray-500 dark:text-gray-100">4</p>
-                          </div>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>
-                          <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
-                              <p class="text-base text-gray-500 dark:text-gray-100 font-medium">5</p>
-                          </div>
-                      </td>
-                      <td>
-                          <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
-                              <p class="text-base text-gray-500 dark:text-gray-100 font-medium">6</p>
-                          </div>
-                      </td>
-                      <td>
-                          <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
-                              <p class="text-base text-gray-500 dark:text-gray-100 font-medium">7</p>
-                          </div>
-                      </td>
-                      <td>
-                          <div class="w-full h-full">
-                              <div class="flex items-center justify-center w-full rounded-full cursor-pointer">
-                                  <a  role="link" tabindex="0" class="focus:outline-none  focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:bg-indigo-500 hover:bg-indigo-500 text-base w-8 h-8 flex items-center justify-center font-medium text-white bg-indigo-700 rounded-full">8</a>
-                              </div>
-                          </div>
-                      </td>
-                      <td>
-                          <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
-                              <p class="text-base text-gray-500 dark:text-gray-100 font-medium">9</p>
-                          </div>
-                      </td>
-                      <td>
-                          <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
-                              <p class="text-base text-gray-500 dark:text-gray-100">10</p>
-                          </div>
-                      </td>
-                      <td>
-                          <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
-                              <p class="text-base text-gray-500 dark:text-gray-100">11</p>
-                          </div>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>
-                          <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
-                              <p class="text-base text-gray-500 dark:text-gray-100 font-medium">12</p>
-                          </div>
-                      </td>
-                      <td>
-                          <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
-                              <p class="text-base text-gray-500 dark:text-gray-100 font-medium">13</p>
-                          </div>
-                      </td>
-                      <td>
-                          <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
-                              <p class="text-base text-gray-500 dark:text-gray-100 font-medium">14</p>
-                          </div>
-                      </td>
-                      <td>
-                          <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
-                              <p class="text-base text-gray-500 dark:text-gray-100 font-medium">15</p>
-                          </div>
-                      </td>
-                      <td>
-                          <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
-                              <p class="text-base text-gray-500 dark:text-gray-100 font-medium">16</p>
-                          </div>
-                      </td>
-                      <td>
-                          <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
-                              <p class="text-base text-gray-500 dark:text-gray-100">17</p>
-                          </div>
-                      </td>
-                      <td>
-                          <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
-                              <p class="text-base text-gray-500 dark:text-gray-100">18</p>
-                          </div>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>
-                          <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
-                              <p class="text-base text-gray-500 dark:text-gray-100 font-medium">19</p>
-                          </div>
-                      </td>
-                      <td>
-                          <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
-                              <p class="text-base text-gray-500 dark:text-gray-100 font-medium">20</p>
-                          </div>
-                      </td>
-                      <td>
-                          <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
-                              <p class="text-base text-gray-500 dark:text-gray-100 font-medium">21</p>
-                          </div>
-                      </td>
-                      <td>
-                          <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
-                              <p class="text-base text-gray-500 dark:text-gray-100 font-medium">22</p>
-                          </div>
-                      </td>
-                      <td>
-                          <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
-                              <p class="text-base text-gray-500 dark:text-gray-100 font-medium">23</p>
-                          </div>
-                      </td>
-                      <td>
-                          <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
-                              <p class="text-base text-gray-500 dark:text-gray-100">24</p>
-                          </div>
-                      </td>
-                      <td>
-                          <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
-                              <p class="text-base text-gray-500 dark:text-gray-100">25</p>
-                          </div>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>
-                          <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
-                              <p class="text-base text-gray-500 dark:text-gray-100 font-medium">26</p>
-                          </div>
-                      </td>
-                      <td>
-                          <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
-                              <p class="text-base text-gray-500 dark:text-gray-100 font-medium">27</p>
-                          </div>
-                      </td>
-                      <td>
-                          <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
-                              <p class="text-base text-gray-500 dark:text-gray-100 font-medium">28</p>
-                          </div>
-                      </td>
-                      <td>
-                          <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
-                              <p class="text-base text-gray-500 dark:text-gray-100 font-medium">29</p>
-                          </div>
-                      </td>
-                      <td>
-                          <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
-                              <p class="text-base text-gray-500 dark:text-gray-100 font-medium">30</p>
-                          </div>
-                      </td>
-                  </tr>
-                  </tbody>
-              </table>
-          </div>
-      </div>
-  </div>
-</div>
-
-      </div>
-    </div>
-</div>
-
-    
- 
-     
-    
-    
- <!-- Footer -->
-<footer class="bg-white rounded-lg shadow dark:bg-red-800 m-4">
-    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-5">
-        <div class="sm:flex sm:items-center sm:justify-between">
-            <a href="https://flowbite.com/" class="flex flex-col items-start mb-4 sm:mb-0 space-x-10 rtl:space-x-reverse">
-                <div class="flex flex-col">
-                    <span class="text-2xl font-semibold whitespace-nowrap dark:text-white">Honeyed Perspectives</span>
-                    <span class="text-sl font-semibold whitespace-nowrap dark:text-white">Crafting Timeless Moments with<br> Sweet Like Honey Photography</span>
-                </div>    
+            <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <span class="self-center text-2xl font-semibold whitespace-nowrap text-red-800">SWEET LIKE HONEY</span>
             </a>
-            <span class="block text-sm text-white sm:text-center dark:text-white">© 2023 <a href="https://flowbite.com/" class="hover:underline">SWEETLIKEHONEY</a>. ALL RIGHTS RESERVED.</span>
-            <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-white mt-4 md:mt-0 sm:mb-0 dark:text-white">
-                <li>
-                    <a href="#" class="hover:underline me-4 md:me-6"><i class="bi bi-facebook text-3xl"></i></a>
-                </li>
-                <li>
-                    <a href="#" class="hover:underline me-4 md:me-6"><i class="bi bi-instagram text-3xl"></i></a>
-                </li>
-                <li>
-                    <a href="#" class="hover:underline me-4 md:me-6"><i class="bi bi-linkedin text-3xl"></i></a>
-                </li>
-            </ul>
+            <button data-collapse-toggle="navbar-dropdown" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="navbar-dropdown" aria-expanded="false">
+                <!-- <span class="sr-only">Open main menu</span> -->
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+                <ul
+                    class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
+                    <li>
+                        <a href="index.html"
+                            class="block py-2 px-3 text-white bg-red-800 rounded md:bg-transparent md:text-red-800 md:p-0 md:dark:text-red-800  dark:bg-red-800 md:dark:bg-transparent"
+                            aria-current="page">HOME</a>
+                    </li>
+                    <li>
+                        <a href="About.html"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-800  md:p-0  md:dark:hover:text-red-800   md:dark:hover:bg-transparent"
+                            aria-current="page">ABOUT</a>
+                    </li>
+                    <li>
+                        <a href="Portfolio.html"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-text-red-800 md:p-0  md:dark:hover:text-red-800  md:dark:hover:bg-transparent"
+                            aria-current="page">PORTFOLIO</a>
+                    </li>
+                    <li>
+                        <a href="Services.html"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-800  md:p-0  md:dark:hover:text-red-800  md:dark:hover:bg-transparent"
+                            aria-current="page">SERVICES</a>
+                    </li>
+                    <li>
+                        <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                            class="flex items-center justify-between w-full py-2 px-3 md:dark:hover:text-red-800 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-text-red-800  md:p-0 md:w-auto">COMMUNITY<svg
+                                class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg></button>
+                        <!-- Dropdown menu -->
+                        <div id="dropdownNavbar"
+                            class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-red-800 dark:divide-red-800">
+                            <ul class="py-2 text-sm text-white dark:text-white" aria-labelledby="dropdownLargeButton">
+                                <li>
+                                    <a href="CommunityAndEvents.html"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-white md:dark:hover:text-red-800">COMMUNITY
+                                        AND EVENTS</a>
+                                </li>
+                                <li>
+                                    <a href="BlogNews.html"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-white md:dark:hover:text-red-800">BLOG
+                                        / NEWS</a>
+                                </li>
+                                <li>
+                                    <a href="Testimonials.html"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-white md:dark:hover:text-red-800">TESTIMONIALS</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="Sitemap.html"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-800  md:p-0  md:dark:hover:text-red-800  md:dark:hover:bg-transparent">SITEMAP</a>
+                    </li>
+                    <li>
+                        <a href="Contact.html"
+                            class="rounded-md bg-red-800 px-3.5 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-white hover:text-red-800 hover:border focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-800">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- component -->
+    <div class="flex justify-center items-center min-h-screen bg-white">
+        <div class="container mx-auto my-4 px-4 lg:px-20">
+            <div class="w-full p-8 my-4 md:px-12 lg:w-9/12 lg:pl-20 lg:pr-40 mr-auto rounded-2xl shadow-2xl">
+                <div class="flex">
+                    <h1 class="font-bold uppercase text-4xl md:text-5xl lg:text-6xl">BOOK A DATE</h1>
+                </div>
+                <div class="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5">
+                    <input
+                        class="w-full bg-gray-100 text-red-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                        type="text" placeholder="First Name*" />
+                    <input
+                        class="w-full bg-gray-100 text-red-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                        type="text" placeholder="Last Name*" />
+                    <input
+                        class="w-full bg-gray-100 text-red-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                        type="text" placeholder="Type of shooting*" />
+                    <input
+                        class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                        type="text" placeholder="Subject*" />
+                    <input
+                        class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                        type="email" placeholder="Email*" />
+                    <input
+                        class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                        type="number" placeholder="Phone*" />
+                </div>
+                <div class="my-4">
+                    <textarea placeholder="Message*"
+                        class="w-full h-32 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
+                </div>
+                <div class="my-2 w-full md:w-1/2 lg:w-1/4">
+                    <button class="uppercase text-sm font-bold tracking-wide bg-red-900 text-gray-100 p-3 rounded-lg w-full 
+                      focus:outline-none focus:shadow-outline">
+                        Send Message
+                    </button>
+                </div>
+            </div>
+
+            <div class="w-full lg:w-2/3 mx-auto mt-8 bg-red-900 rounded-2xl shadow-2xl">
+                <!-- Calendar -->
+                <div class="flex items-center justify-center py-8 px-4 shadow-custom">
+                    <div class="max-w-sm w-full shadow-lg">
+                        <div class="md:p-8 p-5 dark:bg-red-950 bg-white rounded-t">
+                            <div class="px-4 flex items-center justify-between">
+                                <span tabindex="0"
+                                    class="focus:outline-none text-base font-bold dark:text-gray-100 text-gray-800">October
+                                    2020</span>
+                                <div class="flex items-center">
+                                    <button aria-label="calendar backward"
+                                        class="focus:text-gray-400 hover:text-gray-400 text-gray-800 dark:text-gray-100">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24"
+                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <polyline points="15 6 9 12 15 18" />
+                                        </svg>
+                                    </button>
+                                    <button aria-label="calendar forward"
+                                        class="focus:text-gray-400 hover:text-gray-400 ml-3 text-gray-800 dark:text-gray-100">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-chevron-right" width="24" height="24"
+                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <polyline points="9 6 15 12 9 18" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between pt-12 overflow-x-auto">
+                                <table class="w-full">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <div class="w-full flex justify-center">
+                                                    <p
+                                                        class="text-base font-medium text-center text-gray-800 dark:text-gray-100">
+                                                        Mo</p>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="w-full flex justify-center">
+                                                    <p
+                                                        class="text-base font-medium text-center text-gray-800 dark:text-gray-100">
+                                                        Tu</p>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="w-full flex justify-center">
+                                                    <p
+                                                        class="text-base font-medium text-center text-gray-800 dark:text-gray-100">
+                                                        We</p>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="w-full flex justify-center">
+                                                    <p
+                                                        class="text-base font-medium text-center text-gray-800 dark:text-gray-100">
+                                                        Th</p>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="w-full flex justify-center">
+                                                    <p
+                                                        class="text-base font-medium text-center text-gray-800 dark:text-gray-100">
+                                                        Fr</p>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="w-full flex justify-center">
+                                                    <p
+                                                        class="text-base font-medium text-center text-gray-800 dark:text-gray-100">
+                                                        Sa</p>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="w-full flex justify-center">
+                                                    <p
+                                                        class="text-base font-medium text-center text-gray-800 dark:text-gray-100">
+                                                        Su</p>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="pt-6">
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center"></div>
+                                            </td>
+                                            <td class="pt-6">
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center"></div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center"></div>
+                                            </td>
+                                            <td class="pt-6">
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">1
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td class="pt-6">
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">2
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td class="pt-6">
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100">3</p>
+                                                </div>
+                                            </td>
+                                            <td class="pt-6">
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100">4</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">5
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">6
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">7
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="w-full h-full">
+                                                    <div
+                                                        class="flex items-center justify-center w-full rounded-full cursor-pointer">
+                                                        <a role="link" tabindex="0"
+                                                            class="focus:outline-none  focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:bg-indigo-500 hover:bg-indigo-500 text-base w-8 h-8 flex items-center justify-center font-medium text-white bg-indigo-700 rounded-full">8</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">9
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100">10</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100">11</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">12
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">13
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">14
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">15
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">16
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100">17</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100">18</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">19
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">20
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">21
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">22
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">23
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100">24</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100">25</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">26
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">27
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">28
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">29
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">30
+                                                    </p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</footer>
+    </div>
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="bg-white rounded-lg shadow dark:bg-red-800 m-4">
+        <div class="w-full max-w-screen-xl mx-auto p-4 md:py-5">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <a href="https://flowbite.com/"
+                    class="flex flex-col items-start mb-4 sm:mb-0 space-x-10 rtl:space-x-reverse">
+                    <div class="flex flex-col">
+                        <span class="text-2xl font-semibold whitespace-nowrap dark:text-white">Honeyed
+                            Perspectives</span>
+                        <span class="text-sl font-semibold whitespace-nowrap dark:text-white">Crafting Timeless Moments
+                            with<br> Sweet Like Honey Photography</span>
+                    </div>
+                </a>
+                <span class="block text-sm text-white sm:text-center dark:text-white">© 2023 <a
+                        href="https://flowbite.com/" class="hover:underline">SWEETLIKEHONEY</a>. ALL RIGHTS
+                    RESERVED.</span>
+                <ul
+                    class="flex flex-wrap items-center mb-6 text-sm font-medium text-white mt-4 md:mt-0 sm:mb-0 dark:text-white">
+                    <li>
+                        <a href="#" class="hover:underline me-4 md:me-6"><i class="bi bi-facebook text-3xl"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline me-4 md:me-6"><i class="bi bi-instagram text-3xl"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline me-4 md:me-6"><i class="bi bi-linkedin text-3xl"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.1.1/flowbite.min.js"></script>
 </body>
+
 </html>
