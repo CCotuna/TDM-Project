@@ -1,8 +1,10 @@
 <script setup>
+import NavBar from './components/NavBar.vue';
 </script>
 
 <template>
-  <div class="bg-red-500">Localitate</div>
+  <!-- <div class="bg-white"></div> -->
+  <NavBar />
 </template>
 
 <style scoped>
