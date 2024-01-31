@@ -7,16 +7,16 @@ import testimonialData from '../data/testimonialsData.json';
 import { ref } from 'vue';
 
 const sortSens = ref("ASC");
-const sortActive = ref(1);
+const sortActive = ref(2);
 
 const sortedTestimonials = ref(testimonialData);
 
 const sortTopReviews = () => {
    if(sortSens.value === "ASC"){
-    sortedTestimonials.value.sort((a,b) => a.reviews - b.reviews);
+    sortedTestimonials.value.sort((a,b) => a.review - b.review);
     sortSens.value = "DESC";
    } else {
-    sortedTestimonials.value.sort((a,b) => b.reviews - a.reviews);
+    sortedTestimonials.value.sort((a,b) => b.review - a.review);
     sortSens.value = "ASC";
    }
    sortActive.value = 1;
@@ -44,7 +44,7 @@ onMounted(() => {
     <SortTestimonials :sortSens="sortSens" :sortActive="sortActive" @topReviews="sortTopReviews" @topLikes="sortTopLikes"/>
     <div class="flex flex-col px-24 py-10">
         <div class="flex flex-wrap -mx-3 mb-3">
-            <TestimonialCard v-for="testimonial in testimonialData" :key="testimonial.title" :testimonial="testimonial" />
+            <TestimonialCard v-for="testimonial in testimonialData" :key="testimonial.id" :testimonial="testimonial" />
         </div>
     </div>
 </template>

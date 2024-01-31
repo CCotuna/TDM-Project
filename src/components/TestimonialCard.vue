@@ -4,7 +4,6 @@ defineProps({
 })
 </script>
 <template>
-  
             <div class="w-full md:w-1/2 lg:w-1/3 px-3 mb-6">
                 <div
                     class="block rounded-lg bg-white p-6 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-emerald-800">
@@ -25,6 +24,5 @@ defineProps({
                     </div>
                 </div>
             </div>
-
 </template>
 <style scoped></style>
