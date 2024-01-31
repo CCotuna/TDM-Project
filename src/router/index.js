@@ -13,37 +13,37 @@ const router = createRouter({
     {
       path: '/About',
       name: 'about',
-      component: () => import('../views/HomePage.vue')
+      component: () => import('../views/AboutPage.vue')
     },
     {
       path: '/Portfolio',
       name: 'portfolio',
-      component: () => import('../views/HomePage.vue')
+      component: () => import('../views/PortfolioPage.vue')
     },
     {
       path: '/Services',
       name: 'services',
-      component: () => import('../views/HomePage.vue'),
+      component: () => import('../views/ServicesPage.vue'),
     },
     {
       path: '/Community',
       name: 'community and events',
-      component: () => import('../views/HomePage.vue')
+      component: () => import('../views/CommunityAndEventsPage.vue')
     },
     {
       path: '/Blog',
       name: 'blog',
-      component: () => import('../views/HomePage.vue')
+      component: () => import('../views/BlogNewsPage.vue')
     },
     {
       path: '/Testimonials',
       name: 'testimonials',
-      component: () => import('../views/HomePage.vue')
+      component: () => import('../views/TestimonialsPage.vue')
     },
     {
       path: '/Sitemap',
       name: 'sitemap',
-      component: () => import('../views/HomePage.vue')
+      component: () => import('../views/SiteMap.vue')
     },
     {
       path: '/Contact',
