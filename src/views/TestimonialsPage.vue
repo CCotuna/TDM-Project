@@ -38,9 +38,20 @@ onMounted(() => {
   sortTopReviews();
 })
 
+
+import { computed } from 'vue'
+
+const totalTestimonials = computed(() => {
+  return sortedTestimonials.value.length
+})
+
 </script>
 <template>
 
+    <div class="flex flex-col items-center justify-center py-10">
+        <h1 class="text-4xl font-bold">Testimonials</h1>
+        <p class="text-gray-500 text-lg">Total Testimonials: {{ totalTestimonials }}</p>
+    </div>
     <SortTestimonials :sortSens="sortSens" :sortActive="sortActive" @topReviews="sortTopReviews" @topLikes="sortTopLikes"/>
     <div class="flex flex-col px-24 py-10">
         <div class="flex flex-wrap -mx-3 mb-3">

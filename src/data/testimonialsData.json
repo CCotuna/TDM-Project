@@ -96,6 +96,13 @@
         "description": "Transform ordinary photos into extraordinary visual narratives with our professional photo editing services. Powered by the proficiency in Lightroom.",
         "review" : 76,
         "likes" : 34
+    },
+    {
+        "id" : 15,
+        "title": "PHOTO EDITING",
+        "description": "Transform ordinary photos into extraordinary visual narratives with our professional photo editing services. Powered by the proficiency in Lightroom.",
+        "review" : 76,
+        "likes" : 34
     }
     
   ]

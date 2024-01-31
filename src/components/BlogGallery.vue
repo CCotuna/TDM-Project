@@ -2,6 +2,30 @@
 defineProps({
   image: Object
 })
+
+import { ref, watch } from 'vue'
+
+const flippedImage = ref(null);
+
+watch(() => flippedImage.value, (newValue, oldValue) => {
+  if (newValue) {
+    document.body.style.overflow = 'hidden';
+    console.log('Imaginea a fot inversata: ', newValue);
+  } else {
+    document.body.style.overflow = 'auto';
+    console.log('Ai esuat: ', newValue);
+  }
+})
+
+
+const handleImageClick = (image) => {
+  if(!flippedImage.value || flippedImage.value.src !== image.src) {
+    flippedImage.value = image;
+  } else {
+    flippedImage.value = null;
+  }
+}
+
 </script>
 <template>
  <div class="w-full  p-2">
