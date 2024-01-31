@@ -1,18 +1,17 @@
 <script setup>
+import { RouterLink, RouterView, useRouter } from 'vue-router'
 import NavBar from './components/NavBar.vue';
 import Footer from './components/Footer.vue';
 </script>
 
 <template>
-  <!-- <div class="bg-white"></div> -->
-  <div class="flex flex-col min-h-screen">
-    <main class="flex-1">
-      <NavBar />
-    </main>
-    <Footer />  
-  </div>
-
-  
+  <!-- <div class="flex flex-col min-h-screen"> -->
+    <header class="flex-1"> 
+        <NavBar />
+      </header>
+      <Footer />
+      <RouterView />
+  <!-- </div> -->
 </template>
 
 <style scoped>
