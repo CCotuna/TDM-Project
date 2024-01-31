@@ -6,8 +6,10 @@ import Footer from './components/Footer.vue';
 
 <template>
   <div class="flex flex-col min-h-screen">
-    <header class="flex-1 pb-5"> 
-        <NavBar />
+    <header class="flex-1"> 
+        <div class="mb-16">
+          <NavBar />
+        </div>
         <RouterView />
       </header>
       <Footer />
