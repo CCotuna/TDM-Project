@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import { RouterLink } from "vue-router";
+</script>
 <template>
     <div class="flex items-center justify-center py-2 lg:py-0">
         <div class="text-center">
@@ -15,9 +17,9 @@
             <a href="#"
               class="rounded-md bg-white border border-red-800 px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-red-800 hover:text-white hover:border focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-800">DOWNLOAD
               CV</a>
-            <a href="Contact.html"
+            <RouterLink :to="{name: 'contact'}"
               class="rounded-md bg-red-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-white hover:text-red-800 hover:border focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-800">GET
-              IN TOUCH</a>
+              IN TOUCH</RouterLink>
           </div>
         </div>
       </div>
