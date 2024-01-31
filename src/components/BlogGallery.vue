@@ -9,11 +9,11 @@ const flippedImage = ref(null);
 
 watch(() => flippedImage.value, (newValue, oldValue) => {
   if (newValue) {
-    document.body.style.overflow = 'hidden';
+    // document.body.style.overflow = 'hidden';
     console.log('Imaginea a fot inversata: ', newValue);
   } else {
-    document.body.style.overflow = 'auto';
-    console.log('Ai esuat: ', newValue);
+    // document.body.style.overflow = 'auto';
+    console.log('Inversarea imaginii a fost anulata: ', newValue);
   }
 })
 
@@ -29,7 +29,7 @@ const handleImageClick = (image) => {
 </script>
 <template>
  <div class="w-full  p-2">
-    <img :src="image.src" alt="gallery" class="w-full h-full rounded-lg object-cover object-center cursor-pointer hover:scale-105 transition-transform" @click="handleImageClick(image)" />
+    <img :src="image.src" alt="gallery" class="w-full h-full rounded-lg object-cover object-center cursor-pointer hover:scale-105 transition-transform" :class="{ 'rotate-180': flippedImage}" @click="handleImageClick(image)" />
   </div></template>
 
 <style scoped>
