@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Family Photography",
+        "description": "Celebrate the joy of family with timeless portraits that reflect your unique bond. Our family photography sessions are filled with laughter, love, and genuine connections, creating images that tell your story beautifully.",
+        "color": "red"
+    },
+    {
+        "title": "Wedding Photography",
+        "description": "Experience the magic of your wedding day through our lens. From intimate moments to grand celebrations, we capture every emotion with artistry and passion, ensuring your memories last a lifetime.",
+        "color": "blue"
+    },
+    {
+        "title": "Newborn Photography",
+        "description": "Welcome your little one into the world with heartwarming newborn portraits that capture the pure innocence and delicate beauty of infancy. Our gentle approach ensures a comfortable experience, allowing us to preserve the fleeting moments of your baby's earliest days.",
+        "color": "green"
+    }
+]
