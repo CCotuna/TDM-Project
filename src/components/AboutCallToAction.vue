@@ -15,10 +15,10 @@ import { RouterLink } from "vue-router";
           </p>
           <div class="mt-6 flex items-center justify-center gap-x-6">
             <a href="#"
-              class="rounded-md bg-white border border-red-800 px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-red-800 hover:text-white hover:border focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-800">DOWNLOAD
+              class="rounded-md bg-white border border-emerald-800 px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-emerald-800 hover:text-white hover:border focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-800">DOWNLOAD
               CV</a>
             <RouterLink :to="{name: 'contact'}"
-              class="rounded-md bg-red-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-white hover:text-red-800 hover:border focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-800">GET
+              class="rounded-md bg-emerald-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-white hover:text-emerald-800 hover:border focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-800">GET
               IN TOUCH</RouterLink>
           </div>
         </div>

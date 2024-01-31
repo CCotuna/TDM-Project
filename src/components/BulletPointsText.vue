@@ -7,7 +7,7 @@
         <li>
           <div class="flex-start flex items-center pt-3">
             <div class="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-neutral-300 dark:bg-neutral-500"></div>
-            <p class="text-xl text-red-800 dark:text-red-800">
+            <p class="text-xl text-emerald-800 dark:text-emerald-800">
               Individuality
             </p>
           </div>
@@ -28,7 +28,7 @@
         <li>
           <div class="flex-start flex items-center pt-2">
             <div class="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-neutral-300 dark:bg-neutral-500"></div>
-            <p class="text-xl text-red-800 dark:text-red-800">Storytelling</p>
+            <p class="text-xl text-emerald-800 dark:text-emerald-800">Storytelling</p>
           </div>
           <div class="mb-6 ml-4 mt-2">
             <h4 class="mb-1.5 text-xl font-semibold">
@@ -46,7 +46,7 @@
         <li>
           <div class="flex-start flex items-center pt-2">
             <div class="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-neutral-300 dark:bg-neutral-500"></div>
-            <p class="text-xl text-red-800 dark:text-red-800">
+            <p class="text-xl text-emerald-800 dark:text-emerald-800">
               Transformation
             </p>
           </div>
@@ -66,7 +66,7 @@
         <li>
           <div class="flex-start flex items-center pt-2">
             <div class="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-neutral-300 dark:bg-neutral-500"></div>
-            <p class="text-xl text-red-800 dark:text-red-800">Creativity</p>
+            <p class="text-xl text-emerald-800 dark:text-emerald-800">Creativity</p>
           </div>
           <div class="ml-4 mt-2 pb-5">
             <h4 class="mb-1.5 text-xl font-semibold">
