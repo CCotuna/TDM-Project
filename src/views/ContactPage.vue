@@ -1,8 +1,13 @@
 <script setup>
-import NavBar from '../components/NavBar.vue';
+import ContactCard from '../components/ContactCard.vue';
+import ContactFormular from '../components/ContactFormular.vue';
 </script>
 <template>
-    Here I wanna decide what I do
-    hehehehheheheehheheehehhe
+    <div class="flex justify-center items-center min-h-screen bg-white">
+        <div class="container mx-auto my-4 px-4 lg:px-20">
+            <ContactFormular />
+            <ContactCard />
+        </div>
+    </div>
 </template>
 <style scoped></style>
