@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <nav class="bg-white border-gray-200">
+    <nav class="fixed top-0 z-50 w-full bg-white border-gray-200 shadow-md">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       <RouterLink :to="{name: 'homepage'}" class="flex items-center space-x-3 rtl:space-x-reverse">
         <span class="self-center text-2xl font-semibold whitespace-nowrap text-emerald-800 text-shadow-drop-center">SWEET LIKE HONEY</span>
