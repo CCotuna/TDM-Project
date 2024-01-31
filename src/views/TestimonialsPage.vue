@@ -48,7 +48,7 @@ const totalTestimonials = computed(() => {
 </script>
 <template>
 
-    <div class="flex flex-col items-center justify-center py-10">
+    <div class="flex flex-col items-center justify-center py-5">
         <h1 class="text-4xl font-bold">Testimonials</h1>
         <p class="text-gray-500 text-lg">Total Testimonials: {{ totalTestimonials }}</p>
     </div>
