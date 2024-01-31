@@ -6,47 +6,47 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/index',
+      path: '/index.html',
       name: 'homepage',
       component: HomePage
     },
     {
-      path: '/about',
+      path: '/About.html',
       name: 'about',
       component: () => import('../views/HomePage.vue')
     },
     {
-      path: '/portfolio',
+      path: '/Portfolio.html',
       name: 'portfolio',
       component: () => import('../views/HomePage.vue')
     },
     {
-      path: '/services',
+      path: '/Services.html',
       name: 'services',
       component: () => import('../views/HomePage.vue'),
     },
     {
-      path: '/community',
+      path: '/Community.html',
       name: 'community and events',
       component: () => import('../views/HomePage.vue')
     },
     {
-      path: '/blog',
+      path: '/Blog.html',
       name: 'blog',
       component: () => import('../views/HomePage.vue')
     },
     {
-      path: '/testimonials',
+      path: '/Testimonials.html',
       name: 'testimonials',
       component: () => import('../views/HomePage.vue')
     },
     {
-      path: '/sitemap',
+      path: '/Sitemap.html',
       name: 'sitemap',
       component: () => import('../views/HomePage.vue')
     },
     {
-      path: '/contact',
+      path: '/Contact.html',
       name: 'contact',
       component: () => import('../views/ContactPage.vue')
     }
