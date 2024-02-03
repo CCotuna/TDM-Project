@@ -9,10 +9,8 @@ const flippedImage = ref(null);
 
 watch(() => flippedImage.value, (newValue, oldValue) => {
   if (newValue) {
-    // document.body.style.overflow = 'hidden';
     console.log('Imaginea a fot inversata: ', newValue);
   } else {
-    // document.body.style.overflow = 'auto';
     console.log('Inversarea imaginii a fost anulata: ', newValue);
   }
 })
