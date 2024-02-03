@@ -2,14 +2,14 @@
 </script>
 
 <template>
-    <footer class=" rounded-lg shadow dark:bg-emerald-950 m-4">
+    <footer class=" rounded-lg shadow bg-emerald-950 m-4">
         <div class="w-full max-w-screen-xl mx-auto p-4 md:py-5">
             <div class="sm:flex sm:items-center sm:justify-between">
                 <a href="https://flowbite.com/"
                     class="flex flex-col items-start mb-4 sm:mb-0 space-x-10 rtl:space-x-reverse">
                     <div class="flex flex-col">
-                        <span class="text-2xl font-semibold whitespace-nowrap dark:text-white">Honeyed Perspectives</span>
-                        <span class="text-sl font-semibold whitespace-nowrap dark:text-white">Crafting Timeless Moments
+                        <span class="text-2xl font-semibold whitespace-nowrap text-white">Honeyed Perspectives</span>
+                        <span class="text-sl font-semibold whitespace-nowrap text-white">Crafting Timeless Moments
                             with<br />
                             Sweet Like Honey Photography</span>
                     </div>

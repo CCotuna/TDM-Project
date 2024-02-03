@@ -2,7 +2,7 @@
 <template>
      <div class="w-full p-8 my-4 md:px-12 lg:w-9/12 lg:pl-20 lg:pr-40 mr-auto rounded-2xl shadow-2xl">
             <div class="flex">
-                <h1 class="font-bold uppercase text-4xl md:text-5xl lg:text-6xl">BOOK A DATE</h1>
+                <h1 class="font-bold uppercase text-4xl md:text-5xl lg:text-6xl text-white">BOOK A DATE</h1>
             </div>
             <div class="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5">
                 <input

@@ -5,7 +5,7 @@ import HeroSectionPortfolio from '../components/HeroSectionPortfolio.vue';
 
 </script>
 <template>
-    <div class="bg-white">
+    <div class="">
     <div class="grid grid-cols-1 lg:grid-cols-2 relative isolate px-6 pt-10 pb-10">
         
         <BulletPointsText />
