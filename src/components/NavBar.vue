@@ -2,13 +2,13 @@
 </script>
 
 <template>
-    <nav class="fixed top-0 z-50 w-full border-gray-200 shadow-md">
+    <nav class="fixed top-0  w-full border-gray-200 shadow-md shadow-emerald-950 bg-transparent">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       <RouterLink :to="{name: 'homepage'}" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <span class="self-center text-2xl font-semibold whitespace-nowrap text-emerald-800 text-shadow-drop-center">SWEET LIKE HONEY</span>
+        <span class="self-center text-2xl font-semibold whitespace-nowrap text-white text-shadow-drop-center">SWEET LIKE HONEY</span>
       </RouterLink>
       <button data-collapse-toggle="navbar-dropdown" type="button"
-        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
         aria-controls="navbar-dropdown" aria-expanded="false">
         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -17,30 +17,30 @@
       </button>
       <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
         <ul
-          class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
+          class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-transparent md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
           <li>
             <RouterLink :to="{name : 'homepage'}"
-              class="block py-2 px-3 text-white bg-emerald-800 rounded md:bg-transparent md:text-emerald-800 md:p-0 md:dark:text-emerald-800 dark:bg-emerald-800 md:dark:bg-transparent"
+              class="block py-2 px-3 text-white hover:text-emerald-600 rounded md:p-0 "
               aria-current="page">HOME</RouterLink>
           </li>
           <li>
             <RouterLink :to="{name: 'about'}"
-              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-emerald-800 md:p-0 md:dark:hover:text-emerald-800 md:dark:hover:bg-transparent"
+              class="block py-2 px-3 text-white hover:text-emerald-600 rounded md:border-0  md:p-0 "
               aria-current="page">ABOUT</RouterLink>
           </li>
           <li>
             <RouterLink :to="{name: 'portfolio'}"
-              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-text-emerald-800 md:p-0 md:dark:hover:text-emerald-800 md:dark:hover:bg-transparent"
+              class="block py-2 px-3 text-white hover:text-emerald-600 rounded md:border-0  md:p-0 "
               aria-current="page">PORTFOLIO</RouterLink>
           </li>
           <li>
             <RouterLink :to="{name: 'services'}"
-              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-emerald-800 md:p-0 md:dark:hover:text-emerald-800 md:dark:hover:bg-transparent"
+              class="block py-2 px-3 text-white hover:text-emerald-600 rounded  md:border-0  md:p-0"
               aria-current="page">SERVICES</RouterLink>
           </li>
           <li>
             <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
-              class="flex items-center justify-between w-full py-2 px-3 md:dark:hover:text-emerald-800 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-text-emerald-800 md:p-0 md:w-auto">
+              class="flex items-center justify-between w-full py-2 px-3 text-white hover:text-emerald-600 rounded md:border-0  md:p-0 md:w-auto">
               COMMUNITY<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                 viewBox="0 0 10 6">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -70,11 +70,11 @@
           </li>
           <li>
             <RouterLink :to="{name: 'sitemap'}"
-              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-emerald-800 md:p-0 md:dark:hover:text-emerald-800 md:dark:hover:bg-transparent">SITEMAP</RouterLink>
+              class="block py-2 px-3 text-white rounded hover:text-emerald-600 md:border-0  md:p-0 ">SITEMAP</RouterLink>
           </li>
           <li>
             <RouterLink :to="{name: 'contact'}"
-              class="rounded-md bg-emerald-800 px-3.5 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-white hover:text-emerald-800 hover:border focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-800">CONTACT</RouterLink>
+              class="rounded-md bg-emerald-800 px-3.5 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-white hover:text-emerald-600 hover:border focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-800">CONTACT</RouterLink>
           </li>
         </ul>
       </div>

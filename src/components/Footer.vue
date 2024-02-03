@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <footer class="bg-white rounded-lg shadow dark:bg-emerald-800 m-4">
+    <footer class=" rounded-lg shadow dark:bg-emerald-950 m-4">
         <div class="w-full max-w-screen-xl mx-auto p-4 md:py-5">
             <div class="sm:flex sm:items-center sm:justify-between">
                 <a href="https://flowbite.com/"
