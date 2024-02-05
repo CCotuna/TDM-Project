@@ -25,7 +25,7 @@
 
   <style scoped>
   .background-image {
-      background-image: url("./assets/backgroundImage.svg");
+      background-image: url("./assets/backgroundHomePageCameraPhoto.svg");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;

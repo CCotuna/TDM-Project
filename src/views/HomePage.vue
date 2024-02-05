@@ -24,12 +24,14 @@ const lottieOptions = {
 </script>
 <template>
   <HeroSectionHomePage />
-  <Vue3Lottie
+  <div class="">
+    <Vue3Lottie
     :animationData="lottieOptions.animationData"
     :loop="lottieOptions.loop"
     :autoplay="lottieOptions.autoplay"
     :width="200"
   />
+  </div>
 
 </template>
 <style scoped>

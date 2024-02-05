@@ -4,11 +4,11 @@ import { RouterLink } from "vue-router";
 <template>
     <div class="flex items-center justify-center py-2 lg:py-0">
         <div class="text-center">
-          <p class="mt-4 text-lg leading-8 text-gray-600">Hello, I'm</p>
-          <h1 class="text-3xl lg:text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+          <p class="mt-4 text-lg leading-8 text-white">Hello, I'm</p>
+          <h1 class="text-3xl lg:text-5xl font-bold tracking-tight text-white sm:text-6xl">
             Paula Cordos
           </h1>
-          <p class="mt-4 text-lg leading-8 text-gray-600">
+          <p class="mt-4 text-lg leading-8 text-white">
             Discover the heart behind Sweet Like Honey Photography. Our
             journey is woven with passion, creativity, and a commitment to
             immortalizing your cherished moments.
