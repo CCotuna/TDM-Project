@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <nav class="fixed top-0 z-50 w-full border-gray-200 shadow-md shadow-purple-950 NavBarBackgroundImage">
+    <nav class="fixed top-0 z-50 w-full border-gray-200 shadow-md shadow-emerald-950 NavBarBackgroundImage">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 ">
       <RouterLink :to="{name: 'homepage'}" class="flex items-center space-x-3 rtl:space-x-reverse">
         <span class="self-center text-2xl font-semibold whitespace-nowrap text-white text-shadow-drop-center">SWEET LIKE HONEY</span>
@@ -68,13 +68,13 @@
               </ul>
             </div>
           </li>
-          <li>
+          <!-- <li>
             <RouterLink :to="{name: 'sitemap'}"
               class="block py-2 px-3 text-white rounded hover:text-emerald-600 md:border-0 bg-transparent  md:p-0 ">SITEMAP</RouterLink>
-          </li>
+          </li> -->
           <li>
             <RouterLink :to="{name: 'contact'}"
-              class="rounded-md bg-emerald-800 px-3.5 py-1.5 text-sm font-semibold text-white bg-transparent shadow-sm hover:bg-white hover:text-emerald-600 hover:border focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-800">CONTACT</RouterLink>
+              class="rounded-md px-3.5 py-1.5 text-sm font-semibold text-emerald-950 bg-white bg-transparent shadow-sm hover:bg-white hover:text-emerald-600 hover:border focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-800">CONTACT</RouterLink>
           </li>
         </ul>
       </div>
@@ -86,7 +86,7 @@
 
 <style scoped>
 .NavBarBackgroundImage {
-  background-image: url('../assets/NavBarBackgroundImage2.svg');
+  background-image: url('../assets/NavBarBackgroundImage.svg');
   background-size: 100% auto;
   background-position: center;
 }

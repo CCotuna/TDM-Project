@@ -5,13 +5,16 @@
   </script>
 
   <template>
-  <div class="background-image">
+  <div class="background-image ">
       <div class="flex flex-col min-h-screen">
           <header class="flex-1">
               <div class="mb-16">
                 <NavBar />
               </div>
-              <RouterView />
+              <div class="container justify-center items-center mx-auto">
+                <RouterView />  
+              </div>
+              
           </header>
           <Footer />
 
@@ -22,7 +25,7 @@
 
   <style scoped>
   .background-image {
-      background-image: url("./assets/backgroundImage2.svg");
+      background-image: url("./assets/backgroundImage.svg");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
