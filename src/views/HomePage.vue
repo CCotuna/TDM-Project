@@ -6,12 +6,14 @@ import ServicesSectionHomepageCP from '@/components/ServicesSectionHomepageCP.vu
 import ThreePhotosComponentHomepageCP from '@/components/ThreePhotosComponentHomepageCP.vue';
 import ReviewSectionHomepageCP from '@/components/ReviewSectionHomepageCP.vue';
 import InteractiveCameraPhotoHomepageCP from '@/components/InteractiveCameraPhotoHomepageCP.vue';
+import TestComponent from '@/components/TestComponent.vue';
 
 </script>
 <template>
   <div class="parallax-container hero-section-container flex items-start justify-center flex-col">
     <HeroSectionHomepageCP />
   </div>
+  <TestComponent />
 
   <HomepageHeadingCP class="mt-20" />
   <ServiceEditingSectionHomepageCP class="mt-20" />

@@ -5,6 +5,8 @@ import '@/assets/css/main.css'
 import App from './App.vue'
 import router from './router'
 
+import 'vant/lib/index.css'; // Import Vant CSS
+
 import 'bootstrap-icons/font/bootstrap-icons.css'
 // import Vue3Lottie from 'vue3-lottie'
 
