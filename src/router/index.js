@@ -23,7 +23,16 @@ const router = createRouter({
       name: 'services',
       component: () => import('@/views/ServicesPage.vue'),
     },
-    
+    {
+      path: '/Portfolio',
+      name: 'portfolio',
+      component: () => import('@/views/ServicesPage.vue'),
+    },
+    {
+      path: '/Contact',
+      name: 'contact',
+      component: () => import('@/views/ServicesPage.vue'),
+    }
   ],
   scrollBehavior(savedPosition) {
     if(savedPosition) {
