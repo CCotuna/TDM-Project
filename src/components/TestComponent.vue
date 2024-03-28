@@ -1,4 +1,5 @@
 <template>
+    <!-- Using this on Gallery PHOTOS -->
     <img src="@/assets/OIP7.svg" alt="Show Overlay" @click="show = true" class="h-96 w-96 cursor-pointer" />
     <Overlay :show="show" @click="show = false">
         <div class="wrapper" @click.stop>
