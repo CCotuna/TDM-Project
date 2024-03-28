@@ -11,7 +11,7 @@
             </p>
             <div class="mt-6 mb-6 flex items-center justify-center gap-x-6">
                 <RouterLink :to="{ name: 'services' }"
-                    class="rounded-md bg-emerald-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-white hover:text-emerald-800 hover:border focus-visible:outline focus-visible:outline-2 focus-visible:outline-emerald-800">
+                    class="rounded-md bg-emerald-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-md hover:bg-white hover:text-emerald-800 hover:border focus-visible:outline focus-visible:outline-2 focus-visible:outline-emerald-800">
                     Schedule Session</RouterLink>
             </div>
         </div>

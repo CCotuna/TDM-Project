@@ -6,6 +6,7 @@ import ServicesSectionHomepageCP from '@/components/ServicesSectionHomepageCP.vu
 import ThreePhotosComponentHomepageCP from '@/components/ThreePhotosComponentHomepageCP.vue';
 import ReviewSectionHomepageCP from '@/components/ReviewSectionHomepageCP.vue';
 import InteractiveCameraPhotoHomepageCP from '@/components/InteractiveCameraPhotoHomepageCP.vue';
+
 </script>
 <template>
   <div class="parallax-container hero-section-container flex items-start justify-center flex-col">
