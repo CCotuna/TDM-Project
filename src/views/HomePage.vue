@@ -7,14 +7,12 @@ import ThreePhotosComponentHomepageCP from '@/components/ThreePhotosComponentHom
 import ReviewSectionHomepageCP from '@/components/ReviewSectionHomepageCP.vue';
 import InteractiveCameraPhotoHomepageCP from '@/components/InteractiveCameraPhotoHomepageCP.vue';
 
-import Test2Component from '@/components/Test2Component.vue';
 </script>
 <template>
   <div class="parallax-container hero-section-container flex items-start justify-center flex-col">
     <HeroSectionHomepageCP />
   </div>
 
-  <Test2Component class="mt-20" />
 
   <HomepageHeadingCP class="mt-20" />
   <ServiceEditingSectionHomepageCP class="mt-20" />
