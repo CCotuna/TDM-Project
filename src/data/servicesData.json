@@ -4,7 +4,7 @@
         "description": "Capture your essence through our portrait photography. From professional headshots to family portraits, we specialize in showcasing your unique personality.",
         "icon": "-camera2",
         "color": "",
-        "href": "contact",
+        "href": "services",
         "button": "Book Now"
     },
     {
@@ -12,7 +12,7 @@
         "description": "Transform ordinary photos into extraordinary visual narratives with our professional photo editing services. Powered by the proficiency in Lightroom.",
         "icon": "-brilliance",
         "color": "",
-        "href": "contact",
+        "href": "services",
         "button": "Coming Soon"
     },
     {
@@ -20,7 +20,7 @@
         "description": "Let Sweet Like Honey be the storyteller of your events. Our event photography services are designed to encapsulate the energy, emotions, and ambiance of your special occasions.",
         "icon": "-camera2",
         "color": "",
-        "href": "contact",
+        "href": "services",
         "button": "Coming Soon"
     }
   ]
