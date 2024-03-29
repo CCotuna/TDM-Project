@@ -24,7 +24,7 @@
           class="block py-2 px-3 text-black hover:text-mainGreen rounded  md:border-0  md:p-0 bg-transparent custom-font-cinzel-regular"
           aria-current="page">SERVICES</RouterLink>
 
-        <RouterLink :to="{ name: 'services' }"
+        <RouterLink :to="{ name: 'galleries' }"
           class="block py-2 px-3 text-black hover:text-mainGreen rounded  md:border-0  md:p-0 bg-transparent custom-font-cinzel-regular"
           aria-current="page">GALLERIES</RouterLink>
       </div>
@@ -35,7 +35,7 @@
 
 
           <li>
-            <RouterLink :to="{ name: 'about' }"
+            <RouterLink :to="{ name: 'portfolio' }"
               class="block py-2 px-3 text-black hover:text-mainGreen rounded md:border-0  md:p-0  bg-transparent custom-font-cinzel-regular"
               aria-current="page">PORTFOLIO</RouterLink>
           </li>
