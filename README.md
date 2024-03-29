@@ -1,35 +1,5 @@
-# temp
-
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-yarn
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-yarn dev
-```
-
-### Compile and Minify for Production
-
-```sh
-yarn build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-yarn lint
-```
+! NEW DESIGN !
+![image](https://github.com/CCotuna/TDM-Project/assets/126149136/63ddb669-fe64-4bed-884f-02c78ded9c51)
+![image](https://github.com/CCotuna/TDM-Project/assets/126149136/ae595c88-c25d-4581-b0c0-9fa4cff6c7fa)
+![image](https://github.com/CCotuna/TDM-Project/assets/126149136/b02727ff-510c-4ce7-9cc5-0d09b46d6ec1)
+![image](https://github.com/CCotuna/TDM-Project/assets/126149136/c7e7aeb6-8eac-42ab-84a6-ee122837b3ea)
