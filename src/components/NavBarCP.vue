@@ -23,6 +23,10 @@
         <RouterLink :to="{ name: 'services' }"
           class="block py-2 px-3 text-black hover:text-mainGreen rounded  md:border-0  md:p-0 bg-transparent custom-font-cinzel-regular"
           aria-current="page">SERVICES</RouterLink>
+
+        <RouterLink :to="{ name: 'services' }"
+          class="block py-2 px-3 text-black hover:text-mainGreen rounded  md:border-0  md:p-0 bg-transparent custom-font-cinzel-regular"
+          aria-current="page">GALLERIES</RouterLink>
       </div>
 
       <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">

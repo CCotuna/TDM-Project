@@ -6,6 +6,8 @@ import ServicesSectionHomepageCP from '@/components/ServicesSectionHomepageCP.vu
 import ThreePhotosComponentHomepageCP from '@/components/ThreePhotosComponentHomepageCP.vue';
 import ReviewSectionHomepageCP from '@/components/ReviewSectionHomepageCP.vue';
 import InteractiveCameraPhotoHomepageCP from '@/components/InteractiveCameraPhotoHomepageCP.vue';
+// import TestComponent from '@/components/TestComponent.vue';
+// import Test2Component from '@/components/Test2Component.vue';
 
 </script>
 <template>
@@ -13,6 +15,8 @@ import InteractiveCameraPhotoHomepageCP from '@/components/InteractiveCameraPhot
     <HeroSectionHomepageCP />
   </div>
 
+  <!-- <TestComponent class="mt-10" /> -->
+  <!-- <Test2Component class="mt-10" /> -->
 
   <HomepageHeadingCP class="mt-20" />
   <ServiceEditingSectionHomepageCP class="mt-20" />
