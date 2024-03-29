@@ -1,5 +1,6 @@
 
 import { createApp } from 'vue'
+import { createPinia } from "pinia";
 
 import '@/assets/css/main.css'
 import App from './App.vue'
@@ -13,5 +14,6 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 const app = createApp(App)
 
 app.use(router)
+app.use(createPinia());
 // app.use(Vue3Lottie)
 app.mount('#app')
