@@ -2830,7 +2830,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:^3.4.1":
+"tailwindcss@npm:^3.4.3":
   version: 3.4.3
   resolution: "tailwindcss@npm:3.4.3"
   dependencies:
@@ -2891,7 +2891,7 @@ __metadata:
     pinia: "npm:^2.1.7"
     postcss: "npm:^8.4.38"
     prettier: "npm:^3.0.3"
-    tailwindcss: "npm:^3.4.1"
+    tailwindcss: "npm:^3.4.3"
     vant: "npm:^3.4.3"
     vite: "npm:^5.1.6"
     vue: "npm:^3.4.21"
