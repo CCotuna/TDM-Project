@@ -40,7 +40,7 @@
               aria-current="page">PORTFOLIO</RouterLink>
           </li>
           <li>
-            <RouterLink :to="{ name: 'services' }"
+            <RouterLink :to="{ name: 'contact' }"
               class="block py-2 px-3 rounded border-2 bg-emerald-800 text-white hover:border-emerald-600 hover:bg-white hover:text-mainGreen custom-font-cinzel-regular"
               aria-current="page">
               CONTACT</RouterLink>
