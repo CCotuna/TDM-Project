@@ -15,5 +15,16 @@ const app = createApp(App)
 
 app.use(router)
 app.use(createPinia());
+
+import { useAuthStore } from '@/stores/auth';
+
+// Initialize authentication state from local storage
+const authStore = useAuthStore();
+const storedAuth = localStorage.getItem('isAuthenticated');
+if (storedAuth === 'true') {
+    authStore.isAuthenticated = true;
+}
+
+
 // app.use(Vue3Lottie)
 app.mount('#app')

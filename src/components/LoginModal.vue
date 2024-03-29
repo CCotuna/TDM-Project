@@ -10,7 +10,7 @@
         </div>
     </div>
     <div v-if="isAuthenticated">
-        <button v-if="isAuthenticated" @click="logout" class="bg-red-500 text-white px-4 py-2 rounded-md"><span
+        <button @click="logout" class="bg-red-500 text-white px-4 py-2 rounded-md"><span
                 @click="$emit('modal-closed')">Logout</span></button>
         THe user is authenticated and can see the content
     </div>
@@ -31,9 +31,11 @@ function login() {
         // Login successful, close modal
         console.log("Login successful")
         isAuthenticated.value = true;
+        localStorage.setItem('isAuthenticated', 'true');
         isVisible.value = false;
         username.value = ''; // Clear username input
         password.value = ''; // Clear password input
+
     } else {
         // Login failed, handle error
         isAuthenticated.value = false;
@@ -50,6 +52,31 @@ function close() {
 function logout() {
     console.log("logout succesfully")
     isAuthenticated.value = false;
-    authStore.logout();
+    localStorage.removeItem('isAuthenticated');
 }
+
+import { onMounted } from 'vue';
+import { watch } from 'vue';
+
+onMounted(() => {
+    // Check localStorage for authentication state
+    const storedAuth = localStorage.getItem('isAuthenticated');
+    if (storedAuth === 'true') {
+        isAuthenticated.value = true;
+        isVisible.value = false; // Close modal if user is already authenticated
+    }
+
+    console.log('Is user logged in:', isLoggedIn());
+
+});
+
+function isLoggedIn() {
+    return authStore.isAuthenticated && isAuthenticated.value;
+}
+
+watch(isAuthenticated, (value) => {
+    if (value) {
+        isVisible.value = false;
+    }
+})
 </script>
