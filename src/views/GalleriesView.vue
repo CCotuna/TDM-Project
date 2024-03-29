@@ -1,38 +1,22 @@
 <template>
     <div>
-        <div v-if="!isLoggedIn">
-            <input v-model="username" placeholder="Username">
-            <input v-model="password" placeholder="Password" type="password">
-            <button @click="login">Login</button>
-        </div>
-        <div v-else>
-            <p>Welcome, {{ currentUser.username }}!</p>
-            <button @click="logout">Logout</button>
-        </div>
+        <img src="@/assets/pic1.jpg" alt="Photo" @click="showModal" class="w-96 h-96 cursor-pointer mt-20">
+        <LoginModal v-if="isModalVisible" @modal-closed="handleModalClose" />
     </div>
 </template>
 
 <script setup>
-import { ref, computed } from 'vue';
-import { useAuthStore } from '@/stores/auth';
+import { ref } from 'vue';
+import LoginModal from '@/components/LoginModal.vue';
 
-const authStore = useAuthStore();
-const username = ref('');
-const password = ref('');
+const isModalVisible = ref(false);
 
-function login() {
-    if (authStore.login(username.value, password.value)) {
-
-        username.value = '';
-        password.value = '';
-    } else {
-        console.log("Login failed");
-    }
-}
-function logout() {
-    authStore.logout();
+function showModal() {
+    console.log('showModal')
+    isModalVisible.value = true;
 }
 
-const isLoggedIn = computed(() => !!authStore.currentUser);
-const currentUser = computed(() => authStore.currentUser);
+function handleModalClose() {
+    isModalVisible.value = false;
+}
 </script>

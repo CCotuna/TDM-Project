@@ -5,6 +5,7 @@ export const useAuthStore = defineStore("auth", {
     users: [
       { username: "user1", password: "password1" },
       { username: "user2", password: "password2" },
+      // Add more users as needed
     ],
     currentUser: null,
   }),
@@ -15,9 +16,9 @@ export const useAuthStore = defineStore("auth", {
       );
       if (user) {
         this.currentUser = user;
-        return true; 
+        return true; // Login successful
       } else {
-        return false; 
+        return false; // Login failed
       }
     },
     logout() {
