@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomePage from '../views/HomePage.vue'
+import HomeView from '../views/HomeView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -7,31 +7,31 @@ const router = createRouter({
     {
       path: '/index',
       name: 'homepage',
-      component: HomePage
+      component: HomeView
     }, {
       path: '/',
       name: 'homepage',
-      component: HomePage
+      component: HomeView
     },
     {
       path: '/About',
       name: 'about',
-      component: () => import('@/views/AboutPage.vue'),
+      component: () => import('@/views/AboutView.vue'),
     },
     {
       path: '/Services',
       name: 'services',
-      component: () => import('@/views/ServicesPage.vue'),
+      component: () => import('@/views/ServicesView.vue'),
     },
     {
       path: '/Portfolio',
       name: 'portfolio',
-      component: () => import('@/views/ServicesPage.vue'),
+      component: () => import('@/views/ServicesView.vue'),
     },
     {
       path: '/Contact',
       name: 'contact',
-      component: () => import('@/views/ServicesPage.vue'),
+      component: () => import('@/views/ContactView.vue'),
     }
   ],
   scrollBehavior(savedPosition) {
