@@ -5,7 +5,12 @@ import { ref } from 'vue'
 const username = ref('');
 const password = ref('');
 
+let loginStatus = ref(false);
+
 import { v4 as uuidv4 } from 'uuid'
+
+import { useRouter } from 'vue-router';
+const router = useRouter();
 
 async function submitForm() {
     try {
@@ -18,7 +23,8 @@ async function submitForm() {
                 'Content-Type': 'application/json'
             }
         });
-        window.location.reload();
+        router.push({ name: 'homepage' });
+
     } catch (error) {
         console.error("Error submitting form:", error);
     }
@@ -28,22 +34,11 @@ async function submitForm() {
     password.value = '';
 }
 
-
-let loginStatus = ref(false);
-
 import { onMounted } from 'vue'
 onMounted(async () => {
     loginStatus.value = await axios.get("http://localhost:3000/auth/login")
 })
 
-async function logoutAction() {
-    try {
-        loginStatus.value = await axios.post("http://localhost:3000/auth/logout")
-        window.location.reload();
-    } catch (error) {
-        console.error("Error logging out:", error);
-    }
-}
 
 </script>
 
@@ -99,9 +94,9 @@ async function logoutAction() {
             </p>
         </div>
     </div>
-    <div v-else>
-        Random Text
-
-        <button @click="logoutAction"> Logout Boya</button>
+    <div v-else class="mt-64 ms-96">
+        <span class=" text-gray-500">
+            Already Logged In
+        </span>
     </div>
 </template>

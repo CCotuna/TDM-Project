@@ -9,7 +9,14 @@ import InteractiveCameraPhotoHomepageCP from '@/components/InteractiveCameraPhot
 // import TestComponent from '@/components/TestComponent.vue';
 // import Test2Component from '@/components/Test2Component.vue';
 
+// import { beforeRouteEnter } from 'vue-router';
+
+// beforeRouteEnter((to, from, next) => {
+//   window.location.reload();
+//   next();
+// });
 </script>
+
 <template>
   <div class="parallax-container hero-section-container flex items-start justify-center flex-col">
     <HeroSectionHomepageCP />

@@ -9,6 +9,8 @@ export const userAuthStore = defineStore("user", {
     };
   },
   actions: {
-   
+   userLoggedIn(){
+ 
+   }
   },
 });
