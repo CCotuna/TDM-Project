@@ -9,6 +9,10 @@ const user = {
 
 let loggedIn = false;
 
+router.get("/", function (req, res) {
+  res.send(loggedIn);
+});
+
 router.post("/", function (req, res) {
   console.log(req.body);
   let User = req.body;

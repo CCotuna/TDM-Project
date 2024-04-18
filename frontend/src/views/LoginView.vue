@@ -22,10 +22,25 @@ async function submitForm() {
     username.value = '';
     password.value = '';
 }
+
+import { onMounted } from 'vue'
+
+// let loginStatusData = ref(false)
+
+// async function fetchLoginStatus() {
+//     loginStatusData.value = await axios.get("http://localhost:3000/login")
+// }
+
+let loginStatus = ref(false);
+
+onMounted(async () => {
+    loginStatus.value = await axios.get("http://localhost:3000/login")
+})
 </script>
 
 <template>
-    <div class=" flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+    <!-- {{ loginStatus }} -->
+    <div v-if="loginStatus.data == false" class=" flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
         <div class="sm:mx-auto sm:w-full sm:max-w-sm flex flex-col items-center">
             <!-- <span class="custom-font  text-5xl  whitespace-nowrap text-black hover:text-mainGreen ">Sweet
                 Like Honey</span> -->
@@ -75,5 +90,8 @@ async function submitForm() {
                     trial</a>
             </p>
         </div>
+    </div>
+    <div v-else>
+        Random Text
     </div>
 </template>
