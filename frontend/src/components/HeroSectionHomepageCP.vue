@@ -3,7 +3,7 @@ import TypingTextAnimationCP from '@/components/TypingTextAnimationCP.vue';
 </script>
 <template>
     <section class="bg-transparent custom-font-cinzel-regular">
-        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 grid lg:grid-cols-2 gap-8 lg:gap-16">
+        <div class="py-8 px-4 mx-auto lg:mx-32 max-w-screen-xl lg:py-16 grid lg:grid-cols-2 gap-8 lg:gap-16">
             <div class="flex flex-col justify-center">
                 <h1 class="mb-4 text-5xl font-bold tracking-tight leading-none text-gray-900">
                     Welcome to Our <br>
