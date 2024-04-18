@@ -36,19 +36,36 @@ async function addReview() {
 
 }
 
+async function deleteTestimonial(testimonialId) {
+    await axios.delete("http://localhost:3000/testimonials", {
+        headers: {
+            "Content-Type": "application/json",
+        },
+        data: { testimonialId },
+    });
+    window.location.reload();
+}
+
 
 </script>
 <template>
     <section class="container mx-auto p-10 md:py-12 px-0 md:p-8 md:px-0 flex">
-        <section
-            class="p-5 me-5 md:p-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 items-start ">
+        <section v-if="testimonials.length > 0" class="p-5 me-5 md:p-0 grid xl:grid-cols-3 gap-10 items-start ">
             <div v-for="testimonial in testimonials" :key="testimonial.id"
-                class="block max-w-sm p-6 bg-white border border-gray-200 shadow hover:bg-gray-100 dark:bg-emerald-800 dark:border-emerald-700 dark:hover:bg-emerald-700">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ testimonial.title }}
-                </h5>
-                <p class="font-normal text-gray-700 dark:text-gray-400">{{ testimonial.description }}</p>
+                class="block w-auto p-6 bg-white border border-gray-200 shadow hover:bg-gray-100 dark:bg-emerald-800 dark:border-emerald-700 dark:hover:bg-emerald-700">
+                <div class="flex justify-between items-start">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{
+                        testimonial.title }}</h5>
+                    <button @click="deleteTestimonial(testimonial.id)" class="cursor-pointer"><span
+                            class="text-gray-400 text-md">&#10006;</span></button>
+                </div>
+                <p class="font-normal text-gray-700 dark:text-gray-400 break-words">{{ testimonial.description }}</p>
                 <p class="font-normal text-gray-700 dark:text-gray-400">{{ testimonial.rating }}</p>
             </div>
+        </section>
+        <section v-else
+            class="p-5 ms-40 me-5 md:p-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 items-start">
+            <div class="text-2xl font-bold text-emerald-900">No testimonials yet !</div>
         </section>
 
         <section>
@@ -87,7 +104,7 @@ async function addReview() {
                 </div>
             </form>
             <div v-else>
-                <RouterLink :to="{ name: 'login' }" class="font-bold text-xl text-emerald-900">Log in to add a review !
+                <RouterLink :to="{ name: 'login' }" class="text-2xl font-bold text-emerald-900">Log in to add a review !
                 </RouterLink>
             </div>
         </section>
