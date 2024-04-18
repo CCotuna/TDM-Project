@@ -29,6 +29,9 @@ app.use("/gallery", galleryRoutes);
 import contactRoutes from "./routes/contactRoutes.js";
 app.use("/contact", contactRoutes);
 
+import testimonialsRoutes from "./routes/testimonialsRoutes.js";
+app.use("/testimonials", testimonialsRoutes);
+
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}/`);
 });

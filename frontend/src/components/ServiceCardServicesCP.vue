@@ -8,11 +8,11 @@ defineProps({
         <div class="flex items-center justify-center">
             <i :class="'bi bi' + service.icon + ' text-3xl rotate-center'"></i>
         </div>
-        <a href="Booking.html" class="block text-center mt-4">
+        <RouterLink :to="{ name: 'contact' }" class="block text-center mt-4">
             <h5 class="custom-font-cinzel-regular mb-2 text-2xl font-bold tracking-tight text-gray-900 fade-in-fwd">
                 {{ service.title }}
             </h5>
-        </a>
+        </RouterLink>
         <p class="custom-font-old-standard-regular mb-3 font-normal text-gray-700 dark:text-gray-400 text-center">
             {{ service.description }}
         </p>
