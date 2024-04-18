@@ -34,4 +34,12 @@ router.get("/", function (req, res) {
   res.send(galleryPhotos);
 });
 
+router.delete("/", (req, res) => {
+  const { imageId } = req.body;
+
+  const imageIndex = galleryPhotos.findIndex((image) => image.id === imageId);
+  galleryPhotos.splice(imageIndex, 1);
+  res.send("Deleted image from database");
+});
+
 export default router;
