@@ -20,8 +20,8 @@ app.use(function (req, res, next) {
   next();
 });
 
-import loginRoutes from "./routes/loginRoutes.js";
-app.use("/login", loginRoutes);
+import authRoutes from "./routes/authRoutes.js";
+app.use("/auth", authRoutes);
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}/`);

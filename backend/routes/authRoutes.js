@@ -9,11 +9,11 @@ const user = {
 
 let loggedIn = false;
 
-router.get("/", function (req, res) {
+router.get("/login", function (req, res) {
   res.send(loggedIn);
 });
 
-router.post("/", function (req, res) {
+router.post("/login", function (req, res) {
   console.log(req.body);
   let User = req.body;
   console.log("USERUL", User);
@@ -23,7 +23,7 @@ router.post("/", function (req, res) {
   res.send("succesfully logged in");
 });
 
-router.post("/LogOut", function (req, res) {
+router.post("/logout", function (req, res) {
   loggedIn = false;
   res.send("succesfully logged out");
 });
