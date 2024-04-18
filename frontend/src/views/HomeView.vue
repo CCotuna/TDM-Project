@@ -7,7 +7,7 @@ import ThreePhotosComponentHomepageCP from '@/components/ThreePhotosComponentHom
 import ReviewSectionHomepageCP from '@/components/ReviewSectionHomepageCP.vue';
 import InteractiveCameraPhotoHomepageCP from '@/components/InteractiveCameraPhotoHomepageCP.vue';
 // import TestComponent from '@/components/TestComponent.vue';
-// import Test2Component from '@/components/Test2Component.vue';
+import Test2Component from '@/components/Test2Component.vue';
 
 // import { beforeRouteEnter } from 'vue-router';
 
@@ -21,11 +21,10 @@ import InteractiveCameraPhotoHomepageCP from '@/components/InteractiveCameraPhot
   <div class="parallax-container hero-section-container flex items-start justify-center flex-col">
     <HeroSectionHomepageCP />
   </div>
-
+  <HomepageHeadingCP class="mt-10" />
   <!-- <TestComponent class="mt-10" /> -->
-  <!-- <Test2Component class="mt-10" /> -->
+  <Test2Component class="mt-10" />
 
-  <HomepageHeadingCP class="mt-20" />
   <ServiceEditingSectionHomepageCP class="mt-20" />
 
   <div class="parallax-container services-section-container flex items-start justify-center flex-col mt-20">
