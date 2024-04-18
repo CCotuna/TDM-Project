@@ -42,6 +42,11 @@
         path: '/Portfolio',
         name: 'portfolio',
         component: () => import('@/views/PortfolioView.vue'),
+      },
+      {
+        path: '/Login',
+        name: 'login',
+        component: () => import('@/views/LoginView.vue'),
       }
     ],
     scrollBehavior(savedPosition) {
