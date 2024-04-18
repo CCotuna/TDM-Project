@@ -1,5 +1,5 @@
 import express from "express";
-import bodyParser from "body-parser";
+import bodyParser from "body-parser"; // Import body-parser
 
 const app = express();
 const port = 3000;
@@ -20,7 +20,7 @@ app.use(function (req, res, next) {
   next();
 });
 
-import loginRoutes from "./routes/loginRoutes";
+import loginRoutes from "./routes/loginRoutes.js";
 app.use("/login", loginRoutes);
 
 app.listen(port, () => {

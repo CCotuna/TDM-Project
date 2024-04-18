@@ -9,11 +9,12 @@ const user = {
 
 let loggedIn = false;
 
-router.post("/LogIn", function (req, res) {
+router.post("/", function (req, res) {
+  console.log(req.body);
   let User = req.body;
+  console.log("USERUL", User);
   if (user.username == User.username && user.password == User.password) {
     loggedIn = true;
-    res.send();
   }
   res.send("succesfully logged in");
 });
