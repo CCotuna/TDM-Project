@@ -8,6 +8,7 @@ const password = ref('');
 import { v4 as uuidv4 } from 'uuid'
 
 const showSuccessMessage = ref(false)
+const showTryAgainMessage = ref(false);
 
 async function submitForm() {
     try {
@@ -26,7 +27,14 @@ async function submitForm() {
             window.location.reload();
         }, 1000)
     } catch (error) {
-        console.error("Error submitting form:", error);
+        if (error.response && error.response.status === 401) {
+            showTryAgainMessage.value = true;
+            setTimeout(() => {
+                showTryAgainMessage.value = false;
+            }, 3000);
+        } else {
+            console.error("Error submitting form:", error);
+        }
     }
 
     console.log("username", username, "password", password)
@@ -60,18 +68,20 @@ async function displayAccountInformation() {
     informationDisplayed.value = !informationDisplayed.value;
 }
 
+const editUsername = ref('');
+const editPassword = ref('');
 
-// async function editAccount() {
-//     axios.put(
-//         "http://localhost:3000/tasks",
-//         { taskId, value },
-//         {
-//           headers: {
-//             "Content-Type": "application/json",
-//           },
-//         }
-//       );
-// }
+async function editAccount() {
+    axios.put(
+        "http://localhost:3000/auth/editUser",
+        { editUsername, editPassword },
+        {
+            headers: {
+                "Content-Type": "application/json",
+            },
+        }
+    );
+}
 
 </script>
 
@@ -124,6 +134,9 @@ async function displayAccountInformation() {
                 <a href="#" class="font-semibold leading-6 text-emerald-600 hover:text-emerald-500">Start a 14 day free
                     trial</a>
             </p>
+        </div>
+        <div v-if="showTryAgainMessage" class="bg-red-500 text-white py-2 px-4 rounded fixed bottom-5 right-5">
+            Try Again - Incorrect username or password!
         </div>
         <div v-if="showSuccessMessage" class="bg-green-500 text-white py-2 px-4 rounded fixed bottom-5 right-5">
             Successfully logged In!
