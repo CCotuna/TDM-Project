@@ -1,5 +1,29 @@
-<template>
+<script setup>
+import axios from 'axios';
+import { ref } from 'vue'
 
+const username = ref('');
+const password = ref('');
+
+import { v4 } from 'uuid'
+
+async function submitForm() {
+    await axios.post("http:/localhost:3000/login/LogIn", {
+        id: v4(),
+        username,
+        password
+    },
+        {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+    username.value = '';
+    password.value = '';
+}
+</script>
+
+<template>
     <div class="custom-font-cinzel-regular flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
         <div class="sm:mx-auto sm:w-full sm:max-w-sm flex flex-col items-center">
             <!-- <span class="custom-font  text-5xl  whitespace-nowrap text-black hover:text-mainGreen ">Sweet
@@ -10,11 +34,11 @@
         </div>
 
         <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-            <form class="space-y-6">
+            <form @submit.prevent="submitForm" class="space-y-6">
                 <div>
-                    <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
+                    <label for="text" class="block text-sm font-medium leading-6 text-gray-900">Username</label>
                     <div class="mt-2">
-                        <input id="email" name="email" type="email" autocomplete="email" required=""
+                        <input id="text" name="text" type="text" autocomplete="text" required="" v-model="username"
                             class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-emerald-800 sm:text-sm sm:leading-6" />
                     </div>
                 </div>
@@ -29,6 +53,7 @@
                     </div>
                     <div class="mt-2">
                         <input id="password" name="password" type="password" autocomplete="current-password" required=""
+                            v-model="password"
                             class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-emerald-600 sm:text-sm sm:leading-6" />
                     </div>
                 </div>

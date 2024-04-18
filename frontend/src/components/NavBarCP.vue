@@ -56,24 +56,7 @@
 </template>
 
 <script setup>
-// import { computed } from 'vue';
-// import { ref, watch } from 'vue';
 
-// const loginStatus = ref('');
-
-// function updateLoginStatus() {
-//   const storedAuth = localStorage.getItem('isAuthenticated');
-//   loginStatus.value = storedAuth === 'true' ? 'Logged in' : 'Logged out';
-// }
-
-// computed(() => {
-//   updateLoginStatus();
-//   return loginStatus;
-// });
-
-// watch(() => localStorage.getItem('isAuthenticated'), () => {
-//   updateLoginStatus();
-// });
 </script>
 
 
