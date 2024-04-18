@@ -5,8 +5,14 @@ const router = Router();
 const testimonialsArray = [
   {
     id: 1,
-    title: "Hehhe",
-    description: "This is a test review",
+    title: "Great photo",
+    description: "This was a great photo",
+    rating: 4,
+  },
+  {
+    id: 2,
+    title: "Awesome shot",
+    description: "This was the best photo I've ever taken",
     rating: 5,
   },
 ];

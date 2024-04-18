@@ -3,6 +3,7 @@ import { Router } from "express";
 const router = Router();
 
 let user = {
+  id: 1,
   username: "adminAccount",
   password: "pass",
 };
@@ -20,10 +21,14 @@ router.get("/login", function (req, res) {
 });
 
 router.post("/login", function (req, res) {
-  console.log(req.body);
   let User = req.body;
-  console.log("USERUL", User);
-  if (user.username == User.username && user.password == User.password) {
+  let userCurent = userAccounts[0];
+  console.log("USERUL nou", User);
+  console.log("USERUL vechi", userCurent);
+  if (
+    userCurent.username == User.username &&
+    userCurent.password == User.password
+  ) {
     loggedIn = true;
     res.send("succesfully logged in");
   } else {
