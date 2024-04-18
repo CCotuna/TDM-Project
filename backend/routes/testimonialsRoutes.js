@@ -5,9 +5,9 @@ const router = Router();
 const testimonialsArray = [
   {
     id: 1,
-    firstname: "Montes Scelerisque",
-    lastname: "4.9",
-    description: "heheheh",
+    title: "Hehhe",
+    description: "This is a test review",
+    rating: 5,
   },
 ];
 
