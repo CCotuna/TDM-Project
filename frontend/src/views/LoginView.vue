@@ -28,10 +28,10 @@ async function submitForm() {
     password.value = '';
 }
 
-import { onMounted } from 'vue'
 
 let loginStatus = ref(false);
 
+import { onMounted } from 'vue'
 onMounted(async () => {
     loginStatus.value = await axios.get("http://localhost:3000/auth/login")
 })
@@ -48,7 +48,6 @@ async function logoutAction() {
 </script>
 
 <template>
-    <!-- {{ loginStatus }} -->
     <div v-if="loginStatus.data == false" class=" flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
         <div class="sm:mx-auto sm:w-full sm:max-w-sm flex flex-col items-center">
             <!-- <span class="custom-font  text-5xl  whitespace-nowrap text-black hover:text-mainGreen ">Sweet
