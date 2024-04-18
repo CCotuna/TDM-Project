@@ -1,5 +1,19 @@
-<script setup></script>
+<script setup>
+import { ref } from 'vue'
+let gallery = ref([])
+
+import { portfolioStore } from '@/stores/portfolio'
+const portfolio = portfolioStore()
+
+gallery = portfolio.portfolio;
+
+import ImageCard from '@/components/ImageCard.vue'
+</script>
 <template>
-    PORTFOLIO
+    <section class="container mx-auto p-10 md:py-12 px-0 md:p-8 md:px-0">
+        <section class="p-5 md:p-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 items-start ">
+            <ImageCard v-for="image in gallery" :image="image" />
+        </section>
+    </section>
 </template>
 <style scoped></style>
