@@ -5,12 +5,7 @@ import { ref } from 'vue'
 const username = ref('');
 const password = ref('');
 
-let loginStatus = ref(false);
-
 import { v4 as uuidv4 } from 'uuid'
-
-import { useRouter } from 'vue-router';
-const router = useRouter();
 
 async function submitForm() {
     try {
@@ -23,8 +18,7 @@ async function submitForm() {
                 'Content-Type': 'application/json'
             }
         });
-        router.push({ name: 'homepage' });
-
+        window.location.reload();
     } catch (error) {
         console.error("Error submitting form:", error);
     }
@@ -35,14 +29,26 @@ async function submitForm() {
 }
 
 import { onMounted } from 'vue'
+
+let loginStatus = ref(false);
+
 onMounted(async () => {
     loginStatus.value = await axios.get("http://localhost:3000/auth/login")
 })
 
+async function logoutAction() {
+    try {
+        loginStatus.value = await axios.post("http://localhost:3000/auth/logout")
+        window.location.reload();
+    } catch (error) {
+        console.error("Error logging out:", error);
+    }
+}
 
 </script>
 
 <template>
+    <!-- {{ loginStatus }} -->
     <div v-if="loginStatus.data == false" class=" flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
         <div class="sm:mx-auto sm:w-full sm:max-w-sm flex flex-col items-center">
             <!-- <span class="custom-font  text-5xl  whitespace-nowrap text-black hover:text-mainGreen ">Sweet
@@ -94,9 +100,9 @@ onMounted(async () => {
             </p>
         </div>
     </div>
-    <div v-else class="mt-64 ms-96">
-        <span class=" text-gray-500">
-            Already Logged In
-        </span>
+    <div v-else>
+        Account Information
+
+        <button @click="logoutAction"> Logout Boya</button>
     </div>
 </template>
