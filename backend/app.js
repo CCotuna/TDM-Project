@@ -23,6 +23,9 @@ app.use(function (req, res, next) {
 import authRoutes from "./routes/authRoutes.js";
 app.use("/auth", authRoutes);
 
+import galleryRoutes from "./routes/galleryRoutes.js";
+app.use("/gallery", galleryRoutes);
+
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}/`);
 });
