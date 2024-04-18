@@ -37,8 +37,15 @@ router.post("/logout", function (req, res) {
 });
 
 router.put("/editUser", function (req, res) {
-  console.log(req.body);
-  user = req.body;
+  const { editUsername, editPassword } = req.body;
+
+  const newUsername = editUsername._value;
+  const newPassword = editPassword._value;
+
+  user = {
+    username: newUsername,
+    password: newPassword,
+  };
   userAccounts.push(user);
   res.send("succesfully edited user");
 });

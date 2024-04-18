@@ -9,6 +9,8 @@ import { v4 as uuidv4 } from 'uuid'
 
 const showSuccessMessage = ref(false)
 const showTryAgainMessage = ref(false);
+const showSuccessEditedMessage = ref(false);
+
 
 async function submitForm() {
     try {
@@ -81,6 +83,11 @@ async function editAccount() {
             },
         }
     );
+    showSuccessEditedMessage.value = true
+    setTimeout(() => {
+        showSuccessEditedMessage.value = false
+        window.location.reload();
+    }, 1000)
 }
 
 </script>
@@ -200,6 +207,10 @@ async function editAccount() {
                                 class="flex w-32 justify-center rounded-md bg-emerald-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-emerald-800">Logout</button>
                         </div>
                     </form>
+                    <div v-if="showSuccessEditedMessage"
+                        class="bg-green-500 text-white py-2 px-4 rounded fixed bottom-5 right-5">
+                        Successfully change user account information!
+                    </div>
                 </div>
             </div>
 
