@@ -9,6 +9,10 @@ const user = {
 
 let loggedIn = false;
 
+router.get("/", function (req, res) {
+  res.send(JSON.stringify(user));
+});
+
 router.get("/login", function (req, res) {
   res.send(loggedIn);
 });

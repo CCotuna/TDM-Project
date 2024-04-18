@@ -31,6 +31,7 @@ router.get("/", function (req, res) {
 
 router.post("/", function (req, res) {
   sessionBookingRecords.push(req.body);
+  console.log(sessionBookingRecords);
   res.send("Added date to the database");
 });
 
