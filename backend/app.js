@@ -20,6 +20,9 @@ app.use(function (req, res, next) {
   next();
 });
 
+import loginRoutes from "./routes/loginRoutes";
+app.use("/login", loginRoutes);
+
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}/`);
 });
