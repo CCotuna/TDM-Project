@@ -30,7 +30,7 @@
         <ul
           class="flex flex-col items-baseline font-medium p-4 md:p-0 mt-4 border bg-transparent border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
           <!-- Display login status -->
-          <li>{{ loginStatus }}</li>
+          <!-- <li>{{ loginStatus }}</li> -->
 
           <li>
             <RouterLink :to="{ name: 'portfolio' }"
@@ -52,30 +52,24 @@
 </template>
 
 <script setup>
-import { computed } from 'vue';
-import { ref, watch } from 'vue';
+// import { computed } from 'vue';
+// import { ref, watch } from 'vue';
 
-// Define a ref to store the login status
-const loginStatus = ref('');
+// const loginStatus = ref('');
 
-// Function to update login status
-function updateLoginStatus() {
-  // Retrieve the isAuthenticated status from local storage
-  const storedAuth = localStorage.getItem('isAuthenticated');
-  // Update loginStatus based on storedAuth
-  loginStatus.value = storedAuth === 'true' ? 'Logged in' : 'Logged out';
-}
+// function updateLoginStatus() {
+//   const storedAuth = localStorage.getItem('isAuthenticated');
+//   loginStatus.value = storedAuth === 'true' ? 'Logged in' : 'Logged out';
+// }
 
-// Call updateLoginStatus on component mount to initialize loginStatus
-computed(() => {
-  updateLoginStatus();
-  return loginStatus;
-});
+// computed(() => {
+//   updateLoginStatus();
+//   return loginStatus;
+// });
 
-// Watch for changes in localStorage
-watch(() => localStorage.getItem('isAuthenticated'), () => {
-  updateLoginStatus();
-});
+// watch(() => localStorage.getItem('isAuthenticated'), () => {
+//   updateLoginStatus();
+// });
 </script>
 
 
