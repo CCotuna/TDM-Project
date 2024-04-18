@@ -8,16 +8,21 @@ const password = ref('');
 import { v4 as uuidv4 } from 'uuid'
 
 async function submitForm() {
-    await axios.post("http://localhost:3000/login", {
-        id: uuidv4(),
-        username: username.value,
-        password: password.value,
-    },
-        {
+    try {
+        await axios.post("http://localhost:3000/login", {
+            id: uuidv4(),
+            username: username.value,
+            password: password.value,
+        }, {
             headers: {
                 'Content-Type': 'application/json'
             }
-        })
+        });
+        window.location.reload();
+    } catch (error) {
+        console.error("Error submitting form:", error);
+    }
+
     console.log("username", username, "password", password)
     username.value = '';
     password.value = '';
@@ -36,6 +41,7 @@ let loginStatus = ref(false);
 onMounted(async () => {
     loginStatus.value = await axios.get("http://localhost:3000/login")
 })
+
 </script>
 
 <template>
