@@ -30,7 +30,7 @@ export const portfolioStore = defineStore("portffolio", {
             title: "Photo 5",
             url: "https://www.pixelstalk.net/wp-content/uploads/images6/PC-Wallpaper-Anime-Aesthetic-HD-620x342.jpg", 
         }
-      ]
+      ],
     };
   }
 });

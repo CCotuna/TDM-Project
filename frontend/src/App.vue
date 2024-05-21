@@ -5,15 +5,9 @@ import FooterCP from './components/FooterCP.vue';
 </script>
 
 <template>
-  <div class="flex flex-col min-h-screen">
-    <header class="flex-1">
-      <div class="mb-20">
-        <NavBarCP />
-      </div>
-      <div class="container justify-center items-center mx-auto">
-        <RouterView />
-      </div>
-    </header>
+  <div class="w-full h-full bg-cyan-700">
+    <NavBarCP />
+    <RouterView />
     <FooterCP />
   </div>
 

@@ -39,19 +39,9 @@
         component: () => import('@/views/GalleriesView.vue'),
       },
       {
-        path: '/Portfolio',
-        name: 'portfolio',
-        component: () => import('@/views/PortfolioView.vue'),
-      },
-      {
         path: '/Login',
         name: 'login',
         component: () => import('@/views/LoginView.vue'),
-      },
-      {
-        path: '/Testimonials',
-        name: 'testimonials',
-        component: () => import('@/views/TestimonialsView.vue'),
       }
     ],
     scrollBehavior(savedPosition) {
