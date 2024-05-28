@@ -26,7 +26,7 @@
       {
         path: '/Portfolio',
         name: 'portfolio',
-        component: () => import('@/views/ServicesView.vue'),
+        component: () => import('@/views/PortfolioView.vue'),
       },
       {
         path: '/Contact',
@@ -37,6 +37,21 @@
         path: '/Galleries',
         name: 'galleries',
         component: () => import('@/views/GalleriesView.vue'),
+      },
+      {
+        path: '/Booking',
+        name: 'booking',
+        component: () => import('@/views/BookingView.vue'),
+      },
+      {
+        path: '/FAQ',
+        name: 'faq',
+        component: () => import('@/views/FAQView.vue'),
+      },
+      {
+        path: '/Reviews',
+        name: 'reviews',
+        component: () => import('@/views/ReviewsView.vue'),
       },
       {
         path: '/Login',

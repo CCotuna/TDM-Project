@@ -1,7 +1,5 @@
-<script setup>
-import HeroSectionContactCP from '@/components/HeroSectionContactCP.vue'
-</script>
+<script setup></script>
 <template>
-    <HeroSectionContactCP />
+    contact
 </template>
 <style scoped></style>
