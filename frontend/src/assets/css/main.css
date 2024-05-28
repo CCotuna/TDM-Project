@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-width {
+  width: 40rem;
+}
+
+@font-face {
+    font-family: 'CitadelScript';
+    src: url('@/assets/fonts/Citadel Script Std Regular.otf') format('opentype');
+  }
+  
+@font-face {
+    font-family: 'CinzelRegular';
+    src: url('@/assets/fonts/cinzel_font/Cinzel-Regular.ttf') format('truetype');
+  }
+
+@font-face {
+    font-family: 'OldStandardTTRegular';
+    src: url('@/assets/fonts/OldStandardTT-Regular.ttf') format('truetype');
+  }
+
+@font-face {
+    font-family: 'RobotoCondensed';
+    src: url('@/assets/fonts/roboto-condensed/RobotoCondensed-VariableFont_wght.ttf') format('truetype');
+  }
+
+@font-face {
+    font-family: 'PlayFair';
+    src: url('@/assets/fonts/play-fair/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+  }
+  
+.custom-font {
+    font-family: 'CitadelScript', cursive;
+  }
+  
+.custom-font-cinzel-regular {
+    font-family: 'CinzelRegular', serif;
+  }
+  
+.custom-font-old-standard-regular {
+    font-family: 'OldStandardTTRegular', serif;
+  }
+
+.custom-font-roboto-condensed {
+    font-family: 'RobotoCondensed', cursive;
+  }
+
+  .custom-font-play-fair {
+    font-family: 'PlayFair', cursive;
+  }

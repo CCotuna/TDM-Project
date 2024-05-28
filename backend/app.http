@@ -1,0 +1,13 @@
+@mainUrl = http://127.0.0.1:3000/
+###
+#
+POST http://127.0.0.1:3000/login/LogIn
+Content-Type: application/json
+
+{
+    "username": "adminAccount",
+    "password": "pass"
+}
+###
+#
+POST {{mainUrl}}/login/LogOut
