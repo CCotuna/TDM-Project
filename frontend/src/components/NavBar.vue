@@ -15,6 +15,18 @@ const showdeskNavbar = () => {
 const hidedeskNavbar = () => {
   showdesknavbar.value = false;
 };
+
+import { onMounted } from 'vue';
+import { userAuthStore } from "@/stores/user.js"
+const userStorage = userAuthStore();
+
+const user = ref({});
+
+onMounted(async () => {
+  await userStorage.checkAuth();
+  user.value = userStorage.user;
+});
+
 </script>
 <template>
   <section>
@@ -25,6 +37,7 @@ const hidedeskNavbar = () => {
         </button>
       </div>
       <div class="flex space-x-10 items-center">
+        <span class="me-1">{{ user.username }} {{ user.password }}</span>
         <RouterLink :to="{ name: 'homepage' }" class="text-black" aria-current="page">Home</RouterLink>
         <RouterLink :to="{ name: 'about' }" class="text-black" aria-current="page">About</RouterLink>
         <RouterLink :to="{ name: 'galleries' }" class="text-black" aria-current="page">Gallery</RouterLink>
