@@ -1,5 +1,5 @@
 import express from "express";
-import bodyParser from "body-parser"; // Import body-parser
+import bodyParser from "body-parser";
 
 const app = express();
 const port = 3000;
@@ -20,17 +20,11 @@ app.use(function (req, res, next) {
   next();
 });
 
-import authRoutes from "./routes/authRoutes.js";
-app.use("/auth", authRoutes);
+// import tasksRoutes from "./routes/task.routes.js";
+// app.use("/tasks", tasksRoutes);
 
-import galleryRoutes from "./routes/galleryRoutes.js";
-app.use("/gallery", galleryRoutes);
-
-import contactRoutes from "./routes/contactRoutes.js";
-app.use("/contact", contactRoutes);
-
-import testimonialsRoutes from "./routes/testimonialsRoutes.js";
-app.use("/testimonials", testimonialsRoutes);
+// import clientRoutes from "./routes/client.routes.js";
+// app.use("/client", clientRoutes);
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}/`);
