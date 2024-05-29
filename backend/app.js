@@ -20,8 +20,8 @@ app.use(function (req, res, next) {
   next();
 });
 
-// import tasksRoutes from "./routes/task.routes.js";
-// app.use("/tasks", tasksRoutes);
+import userRoutes from "./routes/user.routes.js";
+app.use("/user", userRoutes);
 
 // import clientRoutes from "./routes/client.routes.js";
 // app.use("/client", clientRoutes);

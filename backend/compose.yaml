@@ -3,7 +3,7 @@ services:
     build: .docker
     stdin_open: true
     tty: true
-    container_name: app.BackendSweetLikeHoney
+    container_name: app.backend
     environment:
       NODE_ENV: development
       CHOKIDAR_USEPOLLING: true
@@ -23,28 +23,28 @@ services:
 
   mysql:
     image: mysql:8.0.27
-    container_name: mysql.sweetlikehoney
+    container_name: mysql.annualProject
     ports:
       - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: admin
-      MYSQL_DATABASE: sweetlikehoney
-      MYSQL_USER: sweetlikehoney
-      MYSQL_PASSWORD: sweetlikehoney
+      MYSQL_DATABASE: annualProject
+      MYSQL_USER: annualProject
+      MYSQL_PASSWORD: annualProject
     volumes:
       - mysql_data:/var/lib/mysql
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:5.2.0
-    container_name: pma.sweetlikehoney
+    container_name: pma.annualProject
     ports:
       - "4577:80"
     environment:
-      PMA_HOST: mysql.sweetlikehoney
-      PMA_USER: sweetlikehoney
-      PMA_PASSWORD: sweetlikehoney
+      PMA_HOST: mysql.annualProject
+      PMA_USER: annualProject
+      PMA_PASSWORD: annualProject
       UPLOAD_LIMIT: 250M
 
 volumes:
   mysql_data:
-    driver: local  
+    driver: local
