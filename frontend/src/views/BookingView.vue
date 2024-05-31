@@ -1,5 +1,12 @@
-<script setup></script>
+<script setup>
+
+import { userAuthStore } from "@/stores/user";
+const userStore = userAuthStore();
+
+
+</script>
 <template>
-    booking
+
+    
 </template>
 <style scoped></style>

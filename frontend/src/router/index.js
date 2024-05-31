@@ -57,6 +57,11 @@
         path: '/Login',
         name: 'login',
         component: () => import('@/views/LoginView.vue'),
+      },
+      {
+        path: '/Dashboard',
+        name: 'dashboard',
+        component: () => import('@/views/DashBoardView.vue'),
       }
     ],
     scrollBehavior(savedPosition) {

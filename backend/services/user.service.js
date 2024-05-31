@@ -4,19 +4,15 @@ import { User } from "../models/user.model.js";
 
 export async function getAllUsers() {
   return await User.findAll({
-    attributes: ["id", "username", "password"],
+    attributes: ["userId", "username", "password"],
   });
 }
 
-export async function createUser(username, password, userId) {
-  // LOGICA => SERVICE + REPOSITORTY
-  const transaction = await sequelize.transaction();
+export async function createUser(userId, username, password) {
+  // const transaction = await sequelize.transaction();
 
   try {
-    const userRec = await User.create(
-      { userId, username, password },
-      { transaction }
-    );
+    const userRec = await User.create({ userId, username, password });
     // await Description.create(
     //   {
     //     text: description,
@@ -25,12 +21,10 @@ export async function createUser(username, password, userId) {
     //   },
     //   { transaction }
     // );
-
-    // await transaction.commit();
-
     return userRec.dataValues.id;
   } catch (error) {
-    await transaction.rollback();
+    console.log("Error: ", error);
+    // await transaction.rollback();
   }
 
   return "error";

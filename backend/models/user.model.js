@@ -5,7 +5,7 @@ export const User = sequelize.define(
   "User",
   {
     userId: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     username: {

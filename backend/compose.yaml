@@ -23,28 +23,28 @@ services:
 
   mysql:
     image: mysql:8.0.27
-    container_name: mysql.annualProject
+    container_name: mysql.proiectAnual
     ports:
       - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: admin
-      MYSQL_DATABASE: annualProject
-      MYSQL_USER: annualProject
-      MYSQL_PASSWORD: annualProject
+      MYSQL_DATABASE: proiectAnual
+      MYSQL_USER: proiectAnual
+      MYSQL_PASSWORD: proiectAnual
     volumes:
-      - mysql_data:/var/lib/mysql
+      - mysql_project:/var/lib/mysql
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:5.2.0
-    container_name: pma.annualProject
+    container_name: pma.proiectAnual
     ports:
       - "4577:80"
     environment:
-      PMA_HOST: mysql.annualProject
-      PMA_USER: annualProject
-      PMA_PASSWORD: annualProject
+      PMA_HOST: mysql.proiectAnual
+      PMA_USER: proiectAnual
+      PMA_PASSWORD: proiectAnual
       UPLOAD_LIMIT: 250M
 
 volumes:
-  mysql_data:
+  mysql_project:
     driver: local

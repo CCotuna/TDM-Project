@@ -1,14 +1,14 @@
 import { Sequelize } from "sequelize";
 
 const db = {
-  NAME: "annualProject",
-  USERNAME: "annualProject",
-  PASSWORD: "annualProject",
+  NAME: "proiectAnual",
+  USERNAME: "proiectAnual",
+  PASSWORD: "proiectAnual",
 
   options: {
     dialect: "mysql",
     timezone: "+00:00",
-    host: "mysql.annualProject",
+    host: "mysql.proiectAnual",
     port: 3306,
     logging: function (str) {
       console.log(str);
