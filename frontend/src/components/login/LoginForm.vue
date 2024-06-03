@@ -5,7 +5,7 @@ const username = ref('');
 const password = ref('');
 const emit = defineEmits(['login']);
 
-const onSubmit = () => {
+const submitLoginForm = () => {
     emit('login', { username: username.value, password: password.value });
     username.value = '';
     password.value = '';
@@ -14,7 +14,7 @@ const onSubmit = () => {
 
 <template>
     <div class="w-full max-w-xs">
-        <form @submit.prevent="onSubmit" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <form @submit.prevent="submitLoginForm" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
             <div class="mb-4">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="username2">
                     Username

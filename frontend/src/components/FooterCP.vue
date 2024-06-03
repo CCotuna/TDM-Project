@@ -179,7 +179,8 @@
             <!--Grid-->
             <div class="py-7 border-t border-gray-200">
                 <div class="flex items-center justify-center ">
-                    <span class="text-sm text-gray-500 ">©<a href="https://pagedone.io/">pagedone</a>2024, All rights
+                    <span class="text-sm text-gray-500 ">©<a href="https://pagedone.io/">SweetLikeHoney</a>2024, All
+                        rights
                         reserved.</span>
 
                 </div>
