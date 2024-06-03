@@ -1,5 +1,6 @@
 import { sequelize } from "../db.js";
 import { DataTypes } from "sequelize";
+import { Submission } from "./contact.model.js";
 
 export const User = sequelize.define(
   "User",
@@ -23,3 +24,6 @@ export const User = sequelize.define(
     paranoid: false,
   }
 );
+
+User.hasMany(Submission);
+Submission.belongsTo(User);

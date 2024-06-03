@@ -9,7 +9,6 @@ export const userAuthStore = defineStore("user", {
       user: {},
       usersArray: [],
       isAuthenticated : false,
-      isAuthenticating: false,
     };
   },
   actions: {
@@ -35,12 +34,13 @@ export const userAuthStore = defineStore("user", {
       if (user) {
         this.user.username = user.username;
         this.user.password = user.password;
+        this.user.userId = user.userId;
         this.isAuthenticated = true;
-        this.isAuthenticating = true
+        
       } else {
         this.user = {}
         this.isAuthenticated = false
-        this.isAuthenticating = false
+        
       }
       localStorage.setItem("user", JSON.stringify(this.user));
     },

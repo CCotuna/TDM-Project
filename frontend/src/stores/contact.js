@@ -9,15 +9,14 @@ export const useContactStore = defineStore("contactSubmissions", {
     };
   },
   actions: {
-    async sendContactForm(name, email, phone, eventType, eventDate, eventLocation, message) {
-        const newSubmission = { name, email, phone, eventType, eventDate, eventLocation, message }
+    async sendContactForm(name, email, phone, eventType, eventDate, eventLocation, message, currentUserId) {
+        const newSubmission = { name, email, phone, eventType, eventDate, eventLocation, message, currentUserId }
         this.submissions.push(newSubmission)
-
-        // await axios.post("http://localhost:3000/contact", newSubmission, {
-        //     headers: {
-        //         "Content-Type": "application/json"
-        //     }
-        // })
+        await axios.post("http://localhost:3000/contact", newSubmission, {
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
     }
   }
 });

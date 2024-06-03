@@ -12,8 +12,12 @@ const message = ref('');
 import { useContactStore } from '@/stores/contact';
 const contactStore = useContactStore();
 
+import { userAuthStore } from '@/stores/user';
+const userStore = userAuthStore();
+
 function submitContactForm() {
-    contactStore.sendContactForm(name.value, email.value, phone.value, eventType.value, eventDate.value, eventLocation.value, message.value);
+    console.log(userStore.user.userId, "user id curent")
+    contactStore.sendContactForm(name.value, email.value, phone.value, eventType.value, eventDate.value, eventLocation.value, message.value, userStore.user.userId);
     name.value = '';
     email.value = '';
     phone.value = '';

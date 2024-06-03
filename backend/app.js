@@ -23,6 +23,9 @@ app.use(function (req, res, next) {
 import userRoutes from "./routes/user.routes.js";
 app.use("/user", userRoutes);
 
+import contactRoutes from "./routes/contact.routes.js";
+app.use("/contact", contactRoutes);
+
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}/`);
 });
