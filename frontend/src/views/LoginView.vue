@@ -1,27 +1,43 @@
 <script setup>
+import { ref, computed } from 'vue';
 import LoginForm from '@/components/login/LoginForm.vue';
-
 import RegisterForm from "@/components/login/RegisterForm.vue";
-
 import { userAuthStore } from '@/stores/user';
+
 const userStore = userAuthStore();
+const users = computed(() => userStore.usersArray);
 
-function retrieveUser() {
-    userStore.fetchUsers();
-    console.log("Fetching user");
+// function retrieveUsers() {
+//     userStore.fetchUsers();
+//     console.log("Users", userStore.usersArray);
+// }
+
+function handleLogin(payload) {
+    userStore.login(payload.username, payload.password);
 }
+
+
 </script>
+
 <template>
-    <div class="text-center flex items-center justify-center mt-10">
-        Login
-        <LoginForm />
+    <div class="flex justify-between">
+        <div class="text-center flex flex-col items-center justify-center mt-10">
+            Login
+            <LoginForm @login="handleLogin" />
+        </div>
+        <div class="text-center flex flex-col items-center justify-center mt-10">
+            Don t have an account?
+            Register
+            <RegisterForm />
+        </div>
     </div>
 
+    <!-- <div @click="retrieveUsers" class="cursor-pointer">Fetch User</div> -->
 
-    <div @click="retrieveUser" class=" cursor-pointer">Fetch User</div>
-    <div class="text-center flex items-center justify-center mt-10">
-        Register
-        <RegisterForm />
-    </div>
+    <!-- <div>
+        <ul>
+            <li v-for="user in users" :key="user.id">{{ user.username }}</li>
+        </ul>
+    </div> -->
 </template>
 <style scoped></style>

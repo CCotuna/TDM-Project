@@ -24,11 +24,36 @@ const user = ref({});
 
 onMounted(async () => {
   await userStorage.checkAuth();
-  user.value = userStorage.user;
+  if (userStorage.isAuthenticated) {
+    user.value = userStorage.user;
+  }
 });
+
+import { useRouter } from 'vue-router';
+const router = useRouter();
+
+function handleLogout() {
+  userStorage.logout();
+  router.push({ name: 'homepage' });
+}
+
+const showMessage = ref(false);
+const message = ref('');
 
 </script>
 <template>
+  <!-- <div>
+    <div v-if="userStorage.isAuthenticated" class="bg-green-500 text-white text-center py-2">
+      <p>Authentication successful</p>
+    </div>
+    <div v-else class="bg-red-500 text-white text-center py-2">
+      <p>Authentication failed</p>
+    </div>
+  </div> -->
+  <!-- <div v-if="showMessage" class="text-white text-center py-2"
+    :class="message === 'Authentication successful' ? 'bg-green-500' : 'bg-red-500'">
+    <p>{{ message === 'Authentication successful' ? 'Authentication successful' : 'Authentication failed' }}</p>
+  </div> -->
   <section>
     <div class="bg-transparent hidden md:flex justify-between items-center p-3 mx-10 ">
       <div class="flex items-center gap-5">
@@ -37,6 +62,9 @@ onMounted(async () => {
         </button>
       </div>
       <div class="flex space-x-10 items-center">
+        <div><i class="bi bi-circle-fill text-md"
+            :class="{ 'text-red-500': !userStorage.isAuthenticated, 'text-emerald-500': userStorage.isAuthenticated }"></i>
+        </div>
         <span class="me-1">{{ user.username }} {{ user.password }}</span>
         <RouterLink :to="{ name: 'homepage' }" class="text-black" aria-current="page">Home</RouterLink>
         <RouterLink :to="{ name: 'about' }" class="text-black" aria-current="page">About</RouterLink>
@@ -70,6 +98,9 @@ onMounted(async () => {
               </li>
               <li class="p-2 hover:bg-gray-100">
                 <RouterLink :to="{ name: 'faq' }" class="text-black" aria-current="page">FAQ</RouterLink>
+              </li>
+              <li class="p-2 hover:bg-gray-100">
+                <button v-if="userStorage.isAuthenticated" @click="handleLogout" class="text-black">Logout</button>
               </li>
             </ul>
           </transition>

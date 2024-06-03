@@ -8,38 +8,51 @@ export const userAuthStore = defineStore("user", {
     return {
       user: {},
       usersArray: [],
+      isAuthenticated : false,
+      isAuthenticating: false,
     };
   },
   actions: {
     async fetchUsers() {
       const users = await axios.get("http://localhost:3000/user",)
-      console.log(users.data);
       this.usersArray = users.data;
     },
     checkAuth() {
       const storedUser = localStorage.getItem("user");
-      if (localStorage.getItem("user")) {
+      if (storedUser) {
         this.user = JSON.parse(storedUser)
+        this.isAuthenticated = true
       } else {
-        this.user = {username: "nu merge", password: "nu merge"};
+        this.user = {}
+        this.isAuthenticated = false
       }
-
-      
     },
-    login(username, password) {
-      this.user.username = username;
-      this.user.password = password;
+    async login(username, password) {
 
+      await this.fetchUsers();
+      const user = this.usersArray.find(user => user.username === username && user.password === password);
+      this.usersArray = [];
+      if (user) {
+        this.user.username = user.username;
+        this.user.password = user.password;
+        this.isAuthenticated = true;
+        this.isAuthenticating = true
+      } else {
+        this.user = {}
+        this.isAuthenticated = false
+        this.isAuthenticating = false
+      }
       localStorage.setItem("user", JSON.stringify(this.user));
     },
     logout() {
-
+      this.user = {};
+      this.isAuthenticated = false
+      localStorage.removeItem("user");
     },
     async register(username, password) {
 
       const userId = uuidv4();
       const newUser = { userId, username, password }
-      this.user = newUser;
 
       await axios.post("http://localhost:3000/user", newUser, {
         headers: {

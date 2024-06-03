@@ -8,7 +8,6 @@ import { userAuthStore } from "@/stores/user"
 const userStore = userAuthStore();
 
 function onSubmit() {
-    console.log("S-a aplicat")
     userStore.register(username.value, password.value)
     username.value = ''
     password.value = ''
