@@ -59,7 +59,8 @@ const message = ref('');
     <div class="bg-transparent hidden md:flex justify-between items-center p-3 mx-10 ">
       <div class="flex items-center gap-5">
         <button class=" uppercase font-semibold custom-font-play-fair text-2xl">
-          <RouterLink to="/">Sweet Like <span class="text-brown-sugar">HONEY</span></RouterLink>
+          <RouterLink :to="{ name: 'homepage' }">Sweet Like <span class="text-brown-sugar">HONEY</span></RouterLink>
+          <RouterLink :to="{ name: 'chat' }"><i class="bi bi-chat"></i></RouterLink>
         </button>
       </div>
       <div class="flex space-x-10 items-center">

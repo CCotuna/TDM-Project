@@ -62,6 +62,11 @@
         path: '/Dashboard',
         name: 'dashboard',
         component: () => import('@/views/AdminDashboard.vue'),
+      },
+      {
+        path: '/LiveChat',
+        name: 'chat',
+        component: () => import('@/views/ChatView.vue'),
       }
     ],
     scrollBehavior(savedPosition) {
