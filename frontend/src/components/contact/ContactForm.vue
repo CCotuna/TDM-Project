@@ -16,8 +16,8 @@ import { userAuthStore } from '@/stores/user';
 const userStore = userAuthStore();
 
 function submitContactForm() {
-    console.log(userStore.user.userId, "user id curent")
-    contactStore.sendContactForm(name.value, email.value, phone.value, eventType.value, eventDate.value, eventLocation.value, message.value, userStore.user.userId);
+    console.log(userStore.user, "user id curent")
+    contactStore.sendContactForm(name.value, email.value, phone.value, eventType.value, eventDate.value, eventLocation.value, message.value, userStore.user.id);
     name.value = '';
     email.value = '';
     phone.value = '';

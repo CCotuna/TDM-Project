@@ -19,7 +19,7 @@ export async function createSubmission(
   currentUserId
 ) {
   // const transaction = await sequelize.transaction();
-
+  console.log("current user id: ", currentUserId);
   try {
     const submissionRec = await Submission.create({
       name,

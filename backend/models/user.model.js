@@ -5,10 +5,6 @@ import { Submission } from "./contact.model.js";
 export const User = sequelize.define(
   "User",
   {
-    userId: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
     username: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -16,6 +12,10 @@ export const User = sequelize.define(
     password: {
       type: DataTypes.STRING,
       allowNull: true,
+    },
+    userId: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
   },
   {

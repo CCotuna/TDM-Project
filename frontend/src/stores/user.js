@@ -32,9 +32,10 @@ export const userAuthStore = defineStore("user", {
       const user = this.usersArray.find(user => user.username === username && user.password === password);
       this.usersArray = [];
       if (user) {
+        console.log(user, "user login")
         this.user.username = user.username;
         this.user.password = user.password;
-        this.user.userId = user.userId;
+        this.user.id = user.id;
         this.isAuthenticated = true;
         
       } else {

@@ -28,6 +28,8 @@ export async function addSubmission(req, res) {
     message,
     currentUserId
   );
+  console.log("Submission ID: ", submissionId);
+  console.log("currentUserId: ", currentUserId);
   res.send(JSON.stringify({ id: submissionId }));
 }
 

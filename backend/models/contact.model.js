@@ -53,13 +53,6 @@ export const Submission = sequelize.define(
         notEmpty: true,
       },
     },
-    currentUserId: {
-      type: DataTypes.STRING,
-      allowNull: true,
-      validate: {
-        notEmpty: true,
-      },
-    },
   },
   {
     sequelize,

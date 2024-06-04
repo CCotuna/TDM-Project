@@ -1,8 +1,7 @@
 import { createUser } from "../services/user.service.js";
 
 export async function addUser(req, res) {
-  const { userId, username, password } = req.body;
-
+  const { username, password, userId } = req.body;
   if (!username) {
     throw new Error("Username is required");
   }
@@ -10,7 +9,7 @@ export async function addUser(req, res) {
     throw new Error("Password is required");
   }
 
-  const user = await createUser(userId, username, password);
+  const user = await createUser(username, password, userId);
 
   res.send(JSON.stringify(user));
 }

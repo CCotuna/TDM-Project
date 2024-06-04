@@ -6,3 +6,20 @@ Content-Type: application/json
     "username": "First job to do",
     "password": "CTO"
 }
+
+###
+#
+
+POST http://localhost:3000/contact
+Content-Type: application/json
+
+{
+    "name": "Joe",
+    "email": "asdlkj@mail.com",
+    "phone": "123-456-7890",
+    "eventType": " Wedding" ,
+    "eventDate": "2021-12-12",
+    "eventLocation": "123 Main St",
+    "message": "I would like to book a wedding",
+    "currentUserId": 1
+}
