@@ -34,6 +34,7 @@ const router = useRouter();
 
 function handleLogout() {
   userStorage.logout();
+  hidedeskNavbar();
   router.push({ name: 'homepage' });
 }
 
@@ -65,7 +66,6 @@ const message = ref('');
         <div><i class="bi bi-circle-fill text-md"
             :class="{ 'text-red-500': !userStorage.isAuthenticated, 'text-emerald-500': userStorage.isAuthenticated }"></i>
         </div>
-        <span class="me-1">{{ user.username }} {{ user.password }}</span>
         <RouterLink :to="{ name: 'homepage' }" class="text-black" aria-current="page">Home</RouterLink>
         <RouterLink :to="{ name: 'about' }" class="text-black" aria-current="page">About</RouterLink>
         <RouterLink :to="{ name: 'galleries' }" class="text-black" aria-current="page">Gallery</RouterLink>
@@ -82,22 +82,34 @@ const message = ref('');
                 </RouterLink>
               </li>
               <li class="p-2 hover:bg-gray-100">
-                <RouterLink :to="{ name: 'services' }" class="text-black" aria-current="page">Services</RouterLink>
+                <RouterLink :to="{ name: 'services' }" @click="hidedeskNavbar" class="text-black" aria-current="page">
+                  Services</RouterLink>
               </li>
               <li class="p-2 hover:bg-gray-100">
-                <RouterLink :to="{ name: 'reviews' }" class="text-black" aria-current="page">Reviews</RouterLink>
+                <RouterLink :to="{ name: 'reviews' }" @click="hidedeskNavbar" class="text-black" aria-current="page">
+                  Reviews</RouterLink>
               </li>
               <li class="p-2 hover:bg-gray-100">
-                <RouterLink :to="{ name: 'booking' }" class="text-black" aria-current="page">Booking</RouterLink>
+                <RouterLink :to="{ name: 'booking' }" @click="hidedeskNavbar" class="text-black" aria-current="page">
+                  Booking</RouterLink>
               </li>
               <li class="p-2 hover:bg-gray-100">
-                <RouterLink :to="{ name: 'portfolio' }" class="text-black" aria-current="page">Portfolio</RouterLink>
+                <RouterLink :to="{ name: 'portfolio' }" @click="hidedeskNavbar" class="text-black" aria-current="page">
+                  Portfolio</RouterLink>
               </li>
               <li class="p-2 hover:bg-gray-100">
-                <RouterLink :to="{ name: 'contact' }" class="text-black" aria-current="page">Contact</RouterLink>
+                <RouterLink :to="{ name: 'contact' }" @click="hidedeskNavbar" class="text-black" aria-current="page">
+                  Contact</RouterLink>
               </li>
               <li class="p-2 hover:bg-gray-100">
-                <RouterLink :to="{ name: 'faq' }" class="text-black" aria-current="page">FAQ</RouterLink>
+                <RouterLink :to="{ name: 'faq' }" @click="hidedeskNavbar" class="text-black" aria-current="page">FAQ
+                </RouterLink>
+              </li>
+              <li class="p-2 hover:bg-gray-100">
+                <RouterLink v-if="userStorage.isAuthenticated" :to="{ name: 'dashboard' }" @click="hidedeskNavbar"
+                  class="text-black" aria-current="page">
+                  Dashboard
+                </RouterLink>
               </li>
               <li class="p-2 hover:bg-gray-100">
                 <button v-if="userStorage.isAuthenticated" @click="handleLogout" class="text-black">Logout</button>

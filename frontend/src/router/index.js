@@ -61,7 +61,7 @@
       {
         path: '/Dashboard',
         name: 'dashboard',
-        component: () => import('@/views/DashBoardView.vue'),
+        component: () => import('@/views/AdminDashboard.vue'),
       }
     ],
     scrollBehavior(savedPosition) {

@@ -12,8 +12,12 @@ const users = computed(() => userStore.usersArray);
 //     console.log("Users", userStore.usersArray);
 // }
 
+import { useRouter } from 'vue-router';
+const router = useRouter();
+
 function handleLogin(payload) {
     userStore.login(payload.username, payload.password);
+    router.push({ name: 'homepage' });
 }
 
 
