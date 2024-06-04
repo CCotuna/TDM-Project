@@ -52,8 +52,8 @@ export const userAuthStore = defineStore("user", {
     },
     async register(username, password) {
 
-      const userId = uuidv4();
-      const newUser = { userId, username, password }
+      const customId = uuidv4();
+      const newUser = { username, password, customId }
 
       await axios.post("http://localhost:3000/user", newUser, {
         headers: {

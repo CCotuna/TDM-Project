@@ -18,33 +18,27 @@ export async function createSubmission(
   message,
   currentUserId
 ) {
-  // const transaction = await sequelize.transaction();
-  console.log("current user id: ", currentUserId);
+  const transaction = await sequelize.transaction();
   try {
-    const submissionRec = await Submission.create({
-      name,
-      email,
-      phone,
-      eventType,
-      eventDate,
-      eventLocation,
-      message,
-      currentUserId,
-    });
-    // await Description.create(
-    //   {
-    //     text: description,
-    //     author,
-    //     TaskId: taskRow.id,
-    //   },
-    //   { transaction }
-    // );
-    console.log("Submission: ", submissionRec.dataValues);
+    const submissionRec = await Submission.create(
+      {
+        name,
+        email,
+        phone,
+        eventType,
+        eventDate,
+        eventLocation,
+        message,
+        UserId: currentUserId,
+      },
+      { transaction }
+    );
+
+    await transaction.commit();
+
     return submissionRec.dataValues.id;
   } catch (error) {
-    console.log("Error: ", error);
-    // await transaction.rollback();
+    await transaction.rollback();
   }
-
   return "error";
 }

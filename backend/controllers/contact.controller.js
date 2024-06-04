@@ -11,7 +11,10 @@ export async function addSubmission(req, res) {
     message,
     currentUserId,
   } = req.body;
-  console.log(req.body);
+  console.log(
+    req.body,
+    "bodyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy"
+  );
   if (!email) {
     throw new Error("Email is required");
   }

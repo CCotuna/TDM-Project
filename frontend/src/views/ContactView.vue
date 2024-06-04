@@ -22,6 +22,8 @@ const submissions = contactStore.submissions;
                 {{ submission.eventDate }}
                 {{ submission.eventLocation }}
                 {{ submission.message }}
+                // id:
+                {{ submission.currentUserId }}
             </li>
         </ul>
     </div>

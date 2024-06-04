@@ -13,7 +13,7 @@ export const User = sequelize.define(
       type: DataTypes.STRING,
       allowNull: true,
     },
-    userId: {
+    customId: {
       type: DataTypes.STRING,
       allowNull: false,
     },
