@@ -39,9 +39,9 @@
         component: () => import('@/views/GalleriesView.vue'),
       },
       {
-        path: '/Booking',
-        name: 'booking',
-        component: () => import('@/views/BookingView.vue'),
+        path: '/Blog',
+        name: 'blog',
+        component: () => import('@/views/BlogView.vue'),
       },
       {
         path: '/FAQ',
@@ -67,6 +67,11 @@
         path: '/LiveChat',
         name: 'chat',
         component: () => import('@/views/ChatView.vue'),
+      },
+      {
+        path: '/Profile',
+        name: 'profile',
+        component: () => import('@/views/ProfileView.vue'),
       }
     ],
     scrollBehavior(savedPosition) {

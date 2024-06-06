@@ -58,14 +58,17 @@ const message = ref('');
   <section>
     <div class="bg-transparent hidden md:flex justify-between items-center p-3 mx-10 ">
       <div class="flex items-center gap-5">
-        <button class=" uppercase font-semibold custom-font-play-fair text-2xl">
-          <RouterLink :to="{ name: 'homepage' }">Sweet Like <span class="text-brown-sugar">HONEY</span></RouterLink>
-          <RouterLink :to="{ name: 'chat' }"><i class="bi bi-chat"></i></RouterLink>
-        </button>
+        <div class="flex space-x-14 items-center uppercase font-semibold custom-font-play-fair text-2xl">
+          <RouterLink :to="{ name: 'homepage' }">Sweet Like <span class="text-brown-sugar text-center">HONEY</span>
+          </RouterLink>
+          <RouterLink :to="{ name: 'chat' }"><i class="bi bi-chat align-top"></i></RouterLink>
+        </div>
       </div>
       <div class="flex space-x-10 items-center">
-        <div><i class="bi bi-circle-fill text-md"
-            :class="{ 'text-red-500': !userStorage.isAuthenticated, 'text-emerald-500': userStorage.isAuthenticated }"></i>
+        <div>
+          <RouterLink :to="{ name: 'profile' }"><i class="bi bi-circle-fill text-md"
+              :class="{ 'text-red-500': !userStorage.isAuthenticated, 'text-emerald-500': userStorage.isAuthenticated }"></i>
+          </RouterLink>
         </div>
         <RouterLink :to="{ name: 'homepage' }" class="text-black" aria-current="page">Home</RouterLink>
         <RouterLink :to="{ name: 'about' }" class="text-black" aria-current="page">About</RouterLink>
@@ -76,7 +79,7 @@ const message = ref('');
           </button>
           <transition name="fade">
             <ul v-if="showdesknavbar"
-              class="absolute left-1/2 transform -translate-x-1/2 bg-white rounded shadow-lg mt-2 w-32 h-auto text-center"
+              class="absolute left-1/2 transform -translate-x-1/2 bg-white rounded shadow-lg mt-2 w-32 h-auto text-center z-50"
               @mouseover="showdeskNavbar" @mouseleave="hidedeskNavbar">
               <li class="p-2 hover:bg-gray-100 hover:text-black text-white bg-brown-sugar">
                 <RouterLink :to="{ name: 'login' }" aria-current="page">Login
@@ -91,8 +94,8 @@ const message = ref('');
                   Reviews</RouterLink>
               </li>
               <li class="p-2 hover:bg-gray-100">
-                <RouterLink :to="{ name: 'booking' }" @click="hidedeskNavbar" class="text-black" aria-current="page">
-                  Booking</RouterLink>
+                <RouterLink :to="{ name: 'blog' }" @click="hidedeskNavbar" class="text-black" aria-current="page">
+                  Blog</RouterLink>
               </li>
               <li class="p-2 hover:bg-gray-100">
                 <RouterLink :to="{ name: 'portfolio' }" @click="hidedeskNavbar" class="text-black" aria-current="page">
@@ -106,14 +109,14 @@ const message = ref('');
                 <RouterLink :to="{ name: 'faq' }" @click="hidedeskNavbar" class="text-black" aria-current="page">FAQ
                 </RouterLink>
               </li>
-              <li class="p-2 hover:bg-gray-100">
-                <RouterLink v-if="userStorage.isAuthenticated" :to="{ name: 'dashboard' }" @click="hidedeskNavbar"
-                  class="text-black" aria-current="page">
+              <li v-if="userStorage.isAuthenticated && userStorage.user.username == 'Admin'"
+                class="p-2 hover:bg-gray-100">
+                <RouterLink :to="{ name: 'dashboard' }" @click="hidedeskNavbar" class="text-black" aria-current="page">
                   Dashboard
                 </RouterLink>
               </li>
-              <li class="p-2 hover:bg-gray-100">
-                <button v-if="userStorage.isAuthenticated" @click="handleLogout" class="text-black">Logout</button>
+              <li v-if="userStorage.isAuthenticated" class="p-2 hover:bg-gray-100">
+                <button @click="handleLogout" class="text-black">Logout</button>
               </li>
             </ul>
           </transition>
@@ -129,14 +132,14 @@ const message = ref('');
         <i class="bi bi-list"></i>
       </button>
       <img src="../assets/logo_wout_bg.svg" alt="" class="h-8 sm:h-12" />
-      <button class=" text-xl sm:text-3xl">
+      <RouterLink :to="{ name: 'chat' }" class=" text-xl sm:text-3xl">
         <i class="bi bi-chat-fill"></i>
-      </button>
+      </RouterLink>
     </div>
 
     <!-- navigation links -->
     <transition name="slide">
-      <div v-if="showNav" class="bg-red-500 w-1/2 min-h-screen fixed top-0 left-0 flex flex-col items-center pt-10">
+      <div v-if="showNav" class="bg-black w-1/2 min-h-screen fixed top-0 left-0 flex flex-col items-center pt-10">
         <button @click="closeNavBar()" class=" text-2xl">
           <i class="bi bi-x-lg"></i>
         </button>

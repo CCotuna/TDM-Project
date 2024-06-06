@@ -1,5 +1,6 @@
 import { sequelize } from "../db.js";
 import { DataTypes } from "sequelize";
+
 import { Submission } from "./contact.model.js";
 
 export const User = sequelize.define(

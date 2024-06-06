@@ -7,10 +7,6 @@ import { userAuthStore } from '@/stores/user';
 const userStore = userAuthStore();
 const users = computed(() => userStore.usersArray);
 
-// function retrieveUsers() {
-//     userStore.fetchUsers();
-//     console.log("Users", userStore.usersArray);
-// }
 
 import { useRouter } from 'vue-router';
 const router = useRouter();
@@ -19,29 +15,19 @@ function handleLogin(payload) {
     userStore.login(payload.username, payload.password);
     router.push({ name: 'homepage' });
 }
-
-
 </script>
-
 <template>
-    <div class="flex justify-between">
+    <div class="flex justify-center space-x-10">
         <div class="text-center flex flex-col items-center justify-center mt-10">
-            Login
+            <p>Already have an account?</p>
+            <p>Log in</p>
             <LoginForm @login="handleLogin" />
         </div>
-        <div class="text-center flex flex-col items-center justify-center mt-10">
-            Don t have an account?
-            Register
+        <div v-if="!userStore.user.id" class="text-center flex flex-col items-center justify-center mt-10">
+            <p>Don't have an account?</p>
+            <p>Register</p>
             <RegisterForm />
         </div>
     </div>
-
-    <!-- <div @click="retrieveUsers" class="cursor-pointer">Fetch User</div> -->
-
-    <!-- <div>
-        <ul>
-            <li v-for="user in users" :key="user.id">{{ user.username }}</li>
-        </ul>
-    </div> -->
 </template>
 <style scoped></style>

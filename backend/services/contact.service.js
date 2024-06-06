@@ -2,11 +2,9 @@ import { sequelize } from "../db.js";
 
 import { Submission } from "../models/contact.model.js";
 
-// export async function getAllUsers() {
-//   return await User.findAll({
-//     attributes: ["userId", "username", "password"],
-//   });
-// }
+export async function getAllSubmissions() {
+  return await Submission.findAll();
+}
 
 export async function createSubmission(
   name,
@@ -41,4 +39,14 @@ export async function createSubmission(
     await transaction.rollback();
   }
   return "error";
+}
+
+export async function deleteOneSubmission(submissionId) {
+  const transaction = await sequelize.transaction();
+  try {
+    await Submission.destroy({ where: { id: submissionId } }, { transaction });
+    await transaction.commit();
+  } catch (error) {
+    await transaction.rollback();
+  }
 }

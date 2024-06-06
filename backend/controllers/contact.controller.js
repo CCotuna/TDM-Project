@@ -11,10 +11,6 @@ export async function addSubmission(req, res) {
     message,
     currentUserId,
   } = req.body;
-  console.log(
-    req.body,
-    "bodyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy"
-  );
   if (!email) {
     throw new Error("Email is required");
   }
@@ -36,10 +32,21 @@ export async function addSubmission(req, res) {
   res.send(JSON.stringify({ id: submissionId }));
 }
 
-// import { getAllUsers } from "../services/user.service.js";
+import { getAllSubmissions } from "../services/contact.service.js";
 
-// export async function getUsers(req, res) {
-//   const users = await getAllUsers();
+export async function getSubmissions(req, res) {
+  const submissions = await getAllSubmissions();
+  res.send(JSON.stringify(submissions));
+}
 
-//   res.send(JSON.stringify(users));
-// }
+import { deleteOneSubmission } from "../services/contact.service.js";
+
+export async function deleteSubmission(req, res) {
+  const { submissionId } = req.body;
+  if (!submissionId) {
+    throw new Error("Submission ID is required");
+  }
+
+  await deleteOneSubmission(submissionId);
+  res.send("Submission deleted");
+}

@@ -3,7 +3,7 @@
         <h1>Real-time Chat</h1>
         <div class="messages" ref="messagesContainer">
             <div v-for="message in messages" :key="message.id" :class="{ 'message': true, 'sent': message.sent }">
-                {{ userStorage.user.username }}: {{ message.text }}
+                {{ message.sender }}: {{ message.text }}
             </div>
         </div>
         <input v-model="newMessage" @keyup.enter="sendMessage" placeholder="Type a message" class="message-input" />
@@ -32,9 +32,9 @@ const scrollToBottom = () => {
 const sendMessage = () => {
     if (newMessage.value.trim() !== '') {
         // Add your own message to the messages array
-        messages.value.push({ id: messages.value.length, text: newMessage.value, sent: true });
+        messages.value.push({ id: messages.value.length, text: newMessage.value, sender: userStorage.user.username, sent: true });
         // Send the message to the WebSocket server
-        ws.send(newMessage.value);
+        ws.send(JSON.stringify({ text: newMessage.value, sender: userStorage.user.username }));
         // Clear the input field
         newMessage.value = '';
         // Scroll to the bottom of the messages container
@@ -43,8 +43,10 @@ const sendMessage = () => {
 };
 
 const onMessageReceived = (message) => {
+    // Parse the incoming message JSON
+    const parsedMessage = JSON.parse(message);
     // Add received messages to the messages array
-    messages.value.push({ id: messages.value.length, text: message, sent: false });
+    messages.value.push({ id: messages.value.length, text: parsedMessage.text, sender: parsedMessage.sender, sent: false });
     // Scroll to the bottom of the messages container
     scrollToBottom();
 };

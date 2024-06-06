@@ -16,6 +16,11 @@ export const userAuthStore = defineStore("user", {
       const users = await axios.get("http://localhost:3000/user",)
       this.usersArray = users.data;
     },
+    async fetchUserById(userId) {
+      const user = await axios.get(`http://localhost:3000/user/${userId}`)
+      return user.data;
+    }
+    ,
     checkAuth() {
       const storedUser = localStorage.getItem("user");
       if (storedUser) {
@@ -61,6 +66,35 @@ export const userAuthStore = defineStore("user", {
         },
       })
 
+    },
+    deleteUser(userId){
+
+      const userIndex = this.usersArray.findIndex(user => user.id === userId);
+      this.usersArray.splice(userIndex, 1);
+
+      axios.delete("http://localhost:3000/user", {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        data: { userId },
+      });
+    },
+
+    editUser(userId, username, password) {
+      const userIndex = this.usersArray.findIndex(user => user.id === userId);
+      this.usersArray[userIndex].username = username;
+      this.usersArray[userIndex].password = password;
+
+      axios.put(
+        "http://localhost:3000/user",
+        { userId, username, password},
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
     }
+
   },
 });

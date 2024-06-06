@@ -28,6 +28,12 @@ app.use("/user", userRoutes);
 import contactRoutes from "./routes/contact.routes.js";
 app.use("/contact", contactRoutes);
 
+import reviewRoutes from "./routes/review.routes.js";
+app.use("/reviews", reviewRoutes);
+
+import postRoutes from "./routes/post.routes.js";
+app.use("/posts", postRoutes);
+
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}/`);
 });

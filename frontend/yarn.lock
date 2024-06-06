@@ -5576,6 +5576,7 @@ __metadata:
     pinia: "npm:^2.1.7"
     postcss: "npm:^8.4.38"
     prettier: "npm:^3.0.3"
+    swiper: "npm:^11.1.4"
     tailwindcss: "npm:^3.4.3"
     uuid: "npm:^9.0.1"
     uuidv4: "npm:^6.2.13"
@@ -5586,6 +5587,13 @@ __metadata:
     vue-router: "npm:^4.3.0"
   languageName: unknown
   linkType: soft
+
+"swiper@npm:^11.1.4":
+  version: 11.1.4
+  resolution: "swiper@npm:11.1.4"
+  checksum: a1e4b87f414f67f5da6a07b33d5ee20e54062d21f8bed88195d5d56decff6afddf683e130118b7fa12668de221f794ae63f6c073761b683a4b90bbd5eb585202
+  languageName: node
+  linkType: hard
 
 "synckit@npm:^0.8.6":
   version: 0.8.8

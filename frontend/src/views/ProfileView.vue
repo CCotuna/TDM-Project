@@ -1,3 +1,3 @@
 <script setup></script>
-<template>contact</template>
+<template></template>
 <style scoped></style>
