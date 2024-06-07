@@ -26,3 +26,14 @@ export async function deletePost(req, res) {
   await deleteOnePost(postId);
   res.send("Post deleted");
 }
+
+import { updatePost } from "../services/post.service.js";
+export async function editPost(req, res) {
+  const { postId, title, subtitle, description, text } = req.body;
+  if (!postId) {
+    throw new Error("Post ID is required");
+  }
+
+  await updatePost(postId, title, subtitle, description, text);
+  res.send("Post updated");
+}

@@ -1,13 +1,16 @@
 <template>
-    <div class="chat-container">
-        <h1>Real-time Chat</h1>
-        <div class="messages" ref="messagesContainer">
-            <div v-for="message in messages" :key="message.id" :class="{ 'message': true, 'sent': message.sent }">
+    <div class="chat-container max-w-xl mx-auto p-4 border rounded shadow">
+        <h1 class="text-xl font-bold mb-4">Real-time Chat</h1>
+        <div class="messages flex-1 overflow-y-auto p-4 border-b mb-4" ref="messagesContainer">
+            <div v-for="message in messages" :key="message.id"
+                :class="['message p-2 mb-2 rounded', message.sent ? 'bg-green-200' : 'bg-gray-200']">
                 {{ message.sender }}: {{ message.text }}
             </div>
         </div>
-        <input v-model="newMessage" @keyup.enter="sendMessage" placeholder="Type a message" class="message-input" />
-        <button @click="clearChat">Clear Chat</button>
+        <input v-model="newMessage" @keyup.enter="sendMessage" placeholder="Type a message"
+            class="message-input w-full p-2 border rounded mb-2" />
+        <button @click="clearChat" class="bg-black text-white py-2 px-4 rounded hover:bg-red-600">Clear
+            Chat</button>
     </div>
 </template>
 
@@ -31,28 +34,26 @@ const scrollToBottom = () => {
 
 const sendMessage = () => {
     if (newMessage.value.trim() !== '') {
-        // Add your own message to the messages array
-        messages.value.push({ id: messages.value.length, text: newMessage.value, sender: userStorage.user.username, sent: true });
-        // Send the message to the WebSocket server
-        ws.send(JSON.stringify({ text: newMessage.value, sender: userStorage.user.username }));
-        // Clear the input field
+        if (userStorage.isAuthenticated) {
+            messages.value.push({ id: messages.value.length, text: newMessage.value, sender: userStorage.user.username, sent: true });
+            ws.send(JSON.stringify({ text: newMessage.value, sender: userStorage.user.username }));
+        } else {
+            messages.value.push({ id: messages.value.length, text: newMessage.value, sender: 'Anonymous', sent: true });
+            ws.send(JSON.stringify({ text: newMessage.value, sender: 'Anonymous' }));
+        }
         newMessage.value = '';
-        // Scroll to the bottom of the messages container
         scrollToBottom();
     }
 };
 
 const onMessageReceived = (message) => {
-    // Parse the incoming message JSON
     const parsedMessage = JSON.parse(message);
-    // Add received messages to the messages array
     messages.value.push({ id: messages.value.length, text: parsedMessage.text, sender: parsedMessage.sender, sent: false });
-    // Scroll to the bottom of the messages container
     scrollToBottom();
 };
 
 const clearChat = () => {
-    messages.value = []; // Clear the messages array
+    messages.value = [];
 };
 
 const messagesContainerRef = ref(null);
@@ -68,47 +69,3 @@ onUnmounted(() => {
     }
 });
 </script>
-
-<style scoped>
-.chat-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.messages {
-    flex: 1;
-    overflow-y: auto;
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 10px;
-}
-
-.message {
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f1f1f1;
-}
-
-.sent {
-    background-color: #aaffaa;
-}
-
-.message-input {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-button {
-    margin-top: 10px;
-}
-</style>

@@ -11,9 +11,11 @@ const users = computed(() => userStore.usersArray);
 import { useRouter } from 'vue-router';
 const router = useRouter();
 
-function handleLogin(payload) {
-    userStore.login(payload.username, payload.password);
-    router.push({ name: 'homepage' });
+async function handleLogin(payload) {
+    await userStore.login(payload.username, payload.password);
+    if (userStore.isAuthenticated) {
+        router.push({ name: 'homepage' });
+    }
 }
 </script>
 <template>

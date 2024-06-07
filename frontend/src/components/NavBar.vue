@@ -151,14 +151,25 @@ const message = ref('');
             <RouterLink to="/about">despre noi</RouterLink>
           </button>
           <button @click="closeNavBar()" class=" uppercase font-semibold">
-            <RouterLink to="/services">servicii</RouterLink>
+            <RouterLink :to="{ name: 'services' }" @click="hidedeskNavbar" class="text-black" aria-current="page">
+                  Services</RouterLink>
           </button>
           <button @click="closeNavBar()" class=" uppercase font-semibold">
-            <RouterLink to="/projects">proiecte</RouterLink>
+            <RouterLink :to="{ name: 'reviews' }" @click="hidedeskNavbar" class="text-black" aria-current="page">
+                  Reviews</RouterLink>
           </button>
           <button @click="closeNavBar()" class=" uppercase font-semibold">
-            <RouterLink to="/contact">contact</RouterLink>
+            <RouterLink :to="{ name: 'contact' }" @click="hidedeskNavbar" class="text-black" aria-current="page">
+                  Contact</RouterLink>
           </button>
+          <button @click="closeNavBar()" class=" uppercase font-semibold">
+            <RouterLink :to="{ name: 'dashboard' }" @click="hidedeskNavbar" class="text-black" aria-current="page">
+                  Dashboard
+                </RouterLink>
+          </button>
+          <li v-if="userStorage.isAuthenticated" class="p-2 hover:bg-gray-100">
+                <button @click="handleLogout" class="text-black">Logout</button>
+              </li>
         </div>
       </div>
     </transition>

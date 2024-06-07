@@ -50,3 +50,25 @@ export async function deleteOneSubmission(submissionId) {
     await transaction.rollback();
   }
 }
+
+export async function updateSubmission(
+  submissionId,
+  name,
+  email,
+  phone,
+  eventType,
+  eventDate,
+  eventLocation,
+  message
+) {
+  const transaction = await sequelize.transaction();
+  try {
+    await Submission.update(
+      { name, email, phone, eventType, eventDate, eventLocation, message },
+      { where: { id: submissionId } }
+    );
+    await transaction.commit();
+  } catch (error) {
+    await transaction.rollback();
+  }
+}

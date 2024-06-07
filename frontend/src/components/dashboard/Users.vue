@@ -1,6 +1,7 @@
 <template>
     <div>
-        <div>
+        <div class="py-12 mx-auto max-w-7xl  px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl text-center font-bold text-gray-900 lg:text-left mb-8">Users</h2>
             <ul>
                 <li v-for="user in users" :key="user.id"
                     class="mx-5 flex justify-between items-center align-top space-y-2 border-gray-200">
@@ -14,6 +15,9 @@
                         <button @click="deleteUser(user)"
                             class="bg-black hover:bg-red-700 text-white font-bold py-1 px-4 rounded">Delete</button>
                     </div>
+                </li>
+                <li v-if="users.length === 1">
+                    No users found.
                 </li>
             </ul>
         </div>

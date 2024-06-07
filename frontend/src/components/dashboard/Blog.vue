@@ -1,7 +1,7 @@
 <template>
     <section class="py-12">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl text-center font-bold text-gray-900 lg:text-left mb-8">Testimonials</h2>
+            <h2 class="text-4xl text-center font-bold text-gray-900 lg:text-left mb-8">Blog</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                 <div v-if="posts && posts.length > 0" v-for="post in posts" :key="post.id"
                     class="bg-white border border-solid border-gray-300 rounded-2xl relative">

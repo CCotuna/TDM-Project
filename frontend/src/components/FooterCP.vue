@@ -28,55 +28,57 @@
                         <h4 class="text-lg text-gray-900 font-medium mb-7 text-left">Pagedone</h4>
                         <ul class=" transition-all duration-500">
                             <li class="mb-6"><a href="javascript:;"
-                                    class="text-gray-600 max-lg:flex hover:text-gray-900">Home</a></li>
+                                    class="text-gray-600 max-lg:flex hover:text-gray-900">Homepage</a></li>
                             <li class="mb-6"><a href="javascript:;"
                                     class=" text-gray-600 max-lg:flex hover:text-gray-900">About</a>
                             </li>
                             <li class="mb-6"><a href="javascript:;"
-                                    class=" text-gray-600 max-lg:flex hover:text-gray-900">Pricing</a>
+                                    class=" text-gray-600 max-lg:flex hover:text-gray-900">Gallery</a>
                             </li>
                             <li class="mb-6"><a href="javascript:;"
-                                    class=" text-gray-600 max-lg:flex hover:text-gray-900">Features</a>
+                                    class=" text-gray-600 max-lg:flex hover:text-gray-900">Services</a>
                             </li>
                             <li class="mb-6"><a href="javascript:;"
-                                    class=" text-gray-600 max-lg:flex hover:text-gray-900">Pro
-                                    Version</a></li>
+                                    class=" text-gray-600 max-lg:flex hover:text-gray-900">Reviews</a>
+                            </li>
                         </ul>
                     </div>
                     <div class=" md:col-span-1">
                         <h4 class="text-lg text-gray-900 font-medium mb-7 text-left">Support</h4>
                         <ul class=" transition-all duration-500">
                             <li class="mb-6"><a href="javascript:;"
-                                    class="text-gray-600 max-lg:flex hover:text-gray-900">Customer
-                                    Support</a></li>
+                                    class="text-gray-600 max-lg:flex hover:text-gray-900">Blog</a></li>
                             <li class="mb-6"><a href="javascript:;"
-                                    class=" text-gray-600 max-lg:flex hover:text-gray-900">Cookies</a>
+                                    class=" text-gray-600 max-lg:flex hover:text-gray-900">Portfolio</a>
                             </li>
                             <li class="mb-6"><a href="javascript:;"
-                                    class=" text-gray-600 max-lg:flex hover:text-gray-900">License</a>
+                                    class=" text-gray-600 max-lg:flex hover:text-gray-900">Contact</a>
                             </li>
                             <li class="mb-6"><a href="javascript:;"
                                     class=" text-gray-600 max-lg:flex hover:text-gray-900">Terms &
                                     Conditions</a></li>
                             <li class=""><a href="javascript:;"
-                                    class=" text-gray-600 max-lg:flex hover:text-gray-900">Privacy
-                                    Policy</a></li>
+                                    class=" text-gray-600 max-lg:flex hover:text-gray-900">FAQ </a></li>
                         </ul>
                     </div>
                 </div>
                 <div class=" lg:text-left col-span-full md:col-span-1 lg:w-max">
                     <div class="grid grid-cols-2 gap-3 max-w-sm mx-auto md:hidden xl:grid">
                         <div class="block">
-                            <img src="@/assets/image.jpg" alt="Footer tailwind section" class="max-lg:w-full" />
+                            <img src="https://th.bing.com/th/id/OIP.m5bSrW9288EtgPVnc9RxZwHaE7?w=500&h=333&rs=1&pid=ImgDetMain"
+                                alt="Footer tailwind section" class="max-lg:w-full" />
                         </div>
                         <div class="block">
-                            <img src="@/assets/image.jpg" alt="Footer tailwind section" class="max-lg:w-full" />
+                            <img src="https://th.bing.com/th/id/OIP.Rb-AeEacPix5eGsqm6A9DgAAAA?w=474&h=316&rs=1&pid=ImgDetMain"
+                                alt="Footer tailwind section" class="max-lg:w-full" />
                         </div>
                         <div class="block">
-                            <img src="@/assets/image.jpg" alt="Footer tailwind section" class="max-lg:w-full" />
+                            <img src="https://media.istockphoto.com/id/1474990171/photo/siluet.webp?b=1&s=170667a&w=0&k=20&c=x8zgJCxg2NOTPE1oNNaS0w_JtxjI9zY_s_2wkw1a6L0="
+                                alt="Footer tailwind section" class="max-lg:w-full" />
                         </div>
                         <div class="block">
-                            <img src="@/assets/image.jpg" alt="Footer tailwind section" class="max-lg:w-full" />
+                            <img src="https://th.bing.com/th/id/OIP.1pj79ZU0zGZGsHf9fWufowHaEq?w=1200&h=756&rs=1&pid=ImgDetMain"
+                                alt="Footer tailwind section" class="max-lg:w-full" />
                         </div>
                     </div>
                     <div class="max-w-sm mx-auto hidden md:block xl:hidden">

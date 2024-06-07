@@ -46,7 +46,7 @@ export const userAuthStore = defineStore("user", {
       } else {
         this.user = {}
         this.isAuthenticated = false
-        
+        alert("Invalid username or password")
       }
       localStorage.setItem("user", JSON.stringify(this.user));
     },

@@ -34,6 +34,9 @@ app.use("/reviews", reviewRoutes);
 import postRoutes from "./routes/post.routes.js";
 app.use("/posts", postRoutes);
 
+import galleryRoutes from "./routes/gallery.routes.js";
+app.use("/gallery", galleryRoutes);
+
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}/`);
 });

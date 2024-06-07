@@ -4,6 +4,7 @@ import Users from "@/components/dashboard/Users.vue";
 import Reviews from "@/components/dashboard/Reviews.vue";
 import Blog from "@/components/dashboard/Blog.vue";
 import Submission from "@/components/dashboard/Submission.vue";
+import Gallery from "@/components/dashboard/Gallery.vue";
 
 import { userAuthStore } from "@/stores/user";
 const userStorage = userAuthStore();
@@ -47,14 +48,9 @@ function handleAdminChoice(choice) {
                         Submissions</span>
                 </li>
                 <li>
-                    <span @click="handleAdminChoice('Submissions')" class="cursor-pointer py-2 px-5 bg-transparent transition-all duration-500 ease-in-out text-md text-black
+                    <span @click="handleAdminChoice('gallery')" class="cursor-pointer py-2 px-5 bg-transparent transition-all duration-500 ease-in-out text-md text-black
                         hover:bg-black hover:text-white font-semibold rounded-lg flex justify-center">
-                        Submissions2</span>
-                </li>
-                <li>
-                    <span @click="handleAdminChoice('Submissions')" class="cursor-pointer py-2 px-5 bg-transparent transition-all duration-500 ease-in-out text-md text-black
-                        hover:bg-black hover:text-white font-semibold rounded-lg flex justify-center">
-                        Document</span>
+                        Gallery</span>
                 </li>
             </ul>
             <div class="block max-lg:pl-6">
@@ -84,6 +80,9 @@ function handleAdminChoice(choice) {
                     </div>
                     <div v-if="adminChoice === 'submissions'">
                         <Submission />
+                    </div>
+                    <div v-if="adminChoice === 'gallery'">
+                        <Gallery />
                     </div>
                 </div>
             </div>

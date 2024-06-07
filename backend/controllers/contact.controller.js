@@ -50,3 +50,32 @@ export async function deleteSubmission(req, res) {
   await deleteOneSubmission(submissionId);
   res.send("Submission deleted");
 }
+
+import { updateSubmission } from "../services/contact.service.js";
+export async function editSubmission(req, res) {
+  const {
+    submissionId,
+    name,
+    email,
+    phone,
+    eventType,
+    eventDate,
+    eventLocation,
+    message,
+  } = req.body;
+  if (!submissionId) {
+    throw new Error("Submission ID is required");
+  }
+
+  await updateSubmission(
+    submissionId,
+    name,
+    email,
+    phone,
+    eventType,
+    eventDate,
+    eventLocation,
+    message
+  );
+  res.send("Submission updated");
+}
